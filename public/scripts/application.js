@@ -31,5 +31,7 @@ function getDateRange() {
     for (var d = start; d <= end; d.setDate(d.getDate() + 1)) {
         daysOfYear.push('<p class="date">' + getDateString(new Date(d)) + '</p>');
     }
+    daysOfYear.unshift('<p>Count: ' + daysOfYear.length + '</p>');
+
     outputEl.innerHTML = daysOfYear.join(' ');
 }
