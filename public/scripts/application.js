@@ -1,11 +1,11 @@
 'use strict';
 
-const _monthNames = [
+const monthNames = [
 "January", "February", "March", "April", "May", "June", "July",
 "August", "September", "October", "November", "December"
 ];
 
-const _dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function DateTile(date) {
     this.date  = date;
@@ -18,7 +18,7 @@ function DateTile(date) {
 DateTile.prototype = {
 
     get monthName () {
-        return _monthNames[this.month];
+        return monthNames[this.month];
     },
 
     dateString: function (delimiter) {
@@ -31,47 +31,44 @@ DateTile.prototype = {
                     '<div class="day">' + this.day + '</div>' +
                     '<div class="year">' + this.year + '</div>';
 
-        return '<li class="date '+ this.monthName.toLowerCase() +'">' + inner + '</li>'
+        return '<li class="date">' + inner + '</li>'
     }
 }
 
-let startDateEl  = document.getElementById('start'),
-    endDateEl    = document.getElementById('end'),
-    dateSubmit   = document.getElementById('submit-dates'),
-    countEl      = document.getElementById('date-count'),
-    outputEl     = document.getElementById('json-dates'),
-    defaultEnd   = new Date(),
-    defaultStart = new Date(defaultEnd.getFullYear(), '0', '1');
-
-startDateEl.value = new DateTile(defaultStart).dateString();
-endDateEl.value   = new DateTile(defaultEnd).dateString();
-getDateRange();
-
-dateSubmit.addEventListener('click', getDateRange);
-
-function checkForMonthEnd (dates) {
-    if (dates[0]) {
-        let currentMonth = dates[0].monthName;
+function chunkWeeks(dates) {
+    let weeks = [];
+    for (var i = 0; i < 5; i++) {
+        let days = dates.slice(i * 7, 7 + (7*i));
+        if (days.length) {
+            weeks.push(days);
+        }
     }
-    return dates.filter(function(date) {
-        return date.monthName === currentMonth;
-    });
+    return weeks;
 }
 
 function constructWeeks (dates) {
     let firstDay = dates[0].dow;
-    let week = [];
+    let monthName = dates[0].monthName.toLowerCase();
+    let month = [];
     if (firstDay > 0) {
         let weekPad = new Array(firstDay).fill(null);
         dates = weekPad.concat(dates);
     }
 
-    for (let i in dates) {
-        let date = dates[i];
-        let list = date === null ? '<li class="date"></li>' : date.constructTile();
-        week.push(list);
+    let weeks = chunkWeeks(dates);
+
+    for (let i in weeks) {
+        let singleWeek = weeks[i];
+        let weekHtml = '';
+        for (let i in singleWeek) {
+            let date = singleWeek[i];
+            let week = date === null ? '<li class="date none"></li>' : date.constructTile();
+            weekHtml += week;
+        }
+        month.push('<ul class="week-' + i + '">' + weekHtml + '</ul>');
     }
-    return '<ul class="clearfix">' + week.join('') + '</ul>';
+
+    return '<div class="' + monthName + '">' + month.join('') + '</div>';
 }
 
 function getDateRange() {
@@ -104,3 +101,16 @@ function getDateRange() {
     countEl.textContent = 'Day Count: ' + count;
     outputEl.innerHTML = output;
 }
+
+let startDateEl  = document.getElementById('start'),
+    endDateEl    = document.getElementById('end'),
+    dateSubmit   = document.getElementById('submit-dates'),
+    countEl      = document.getElementById('date-count'),
+    outputEl     = document.getElementById('json-dates'),
+    defaultEnd   = new Date(),
+    defaultStart = new Date(defaultEnd.getFullYear(), '0', '1');
+
+startDateEl.value = new DateTile(defaultStart).dateString();
+endDateEl.value   = new DateTile(defaultEnd).dateString();
+dateSubmit.addEventListener('click', getDateRange);
+getDateRange();

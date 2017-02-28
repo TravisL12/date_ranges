@@ -1,30 +1,67 @@
 body {
-    width: 1200px;
-    margin: 10px auto;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
+  width: 1200px;
+  margin: 10px auto;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+ul {
+  margin: 0;
+  padding: 0; }
 
 #json-dates {
-    clear: both;
-    padding: 5px;
-}
+  clear: both;
+  padding: 5px; }
 
-.clearfix {
-    clear: both;
-}
+.week {
+  display: inline-block;
+  width: 100%; }
+
+.january .date {
+  background: cadetblue; }
+
+.february .date {
+  background: lightblue; }
+
+.march .date {
+  background: lime; }
+
+.april .date {
+  background: red; }
+
+.may .date {
+  background: blue; }
+
+.june .date {
+  background: purple; }
+
+.july .date {
+  background: blanchedalmond; }
+
+.august .date {
+  background: pink; }
+
+.september .date {
+  background: wheat; }
+
+.october .date {
+  background: green; }
+
+.november .date {
+  background: cyan; }
+
+.december .date {
+  background: coral; }
 
 .date {
-    list-style: none;
-    position: relative;
-    float: left;
-    font-size: 14px;
-    width: 130px;
-    height: 130px;
-    margin: 0 5px 5px 0;
-    padding: 2px 5px;
-}
-
-.date .day {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 130px;
+  height: 130px;
+  margin: 0 5px 5px 0;
+  padding: 2px 5px;
+  vertical-align: middle; }
+  .date .day {
     font-weight: 600;
     color: #dfdfdf;
     position: absolute;
@@ -35,24 +72,12 @@ body {
     transform: translateY(-50%);
     top: 50%;
     left: 0;
-    right: 0;
-}
-
-.date .year {
+    right: 0; }
+  .date .year {
     position: absolute;
     bottom: 2px;
-    right: 4px;
-}
+    right: 4px; }
+  .date.none {
+    background: transparent; }
 
-.date.january   { background: cadetblue; }
-.date.february  { background: lightblue; }
-.date.march     { background: lime; }
-.date.april     { background: red; }
-.date.may       { background: blue; }
-.date.june      { background: purple; }
-.date.july      { background: blanchedalmond; }
-.date.august    { background: pink; }
-.date.september { background: wheat; }
-.date.october   { background: green; }
-.date.november  { background: cyan; }
-.date.december  { background: coral; }
+/*# sourceMappingURL=application.css.map */

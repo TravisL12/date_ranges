@@ -1,0 +1,67 @@
+body {
+    width: 1200px;
+    margin: 10px auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#json-dates {
+    clear: both;
+    padding: 5px;
+}
+
+.week {
+    display: inline-block;
+    width: 100%;
+}
+
+.january   .date { background: cadetblue; }
+.february  .date { background: lightblue; }
+.march     .date { background: lime; }
+.april     .date { background: red; }
+.may       .date { background: blue; }
+.june      .date { background: purple; }
+.july      .date { background: blanchedalmond; }
+.august    .date { background: pink; }
+.september .date { background: wheat; }
+.october   .date { background: green; }
+.november  .date { background: cyan; }
+.december  .date { background: coral; }
+
+.date {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    font-size: 14px;
+    width: 130px;
+    height: 130px;
+    margin: 0 5px 5px 0;
+    padding: 2px 5px;
+    vertical-align: middle;
+
+    .day {
+        font-weight: 600;
+        color: #dfdfdf;
+        position: absolute;
+        font-size: 50px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0;
+        right: 0;
+    }
+
+    .year {
+        position: absolute;
+        bottom: 2px;
+        right: 4px;
+    }
+
+    &.none { background: transparent; }
+}
