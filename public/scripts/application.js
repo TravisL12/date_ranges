@@ -38,7 +38,8 @@ DateTile.prototype = {
 function chunkWeeks(dates) {
     let weeks = [];
     for (var i = 0; i < 5; i++) {
-        let days = dates.slice(i * 7, 7 + (7*i));
+        let weekIdx = i * 7;
+        let days = dates.slice(weekIdx, weekIdx + 7);
         if (days.length) {
             weeks.push(days);
         }
@@ -49,24 +50,19 @@ function chunkWeeks(dates) {
 function constructWeeks (dates) {
     let firstDay = dates[0].dow;
     let monthName = dates[0].monthName.toLowerCase();
-    let month = [];
     if (firstDay > 0) {
         let weekPad = new Array(firstDay).fill(null);
         dates = weekPad.concat(dates);
     }
 
-    let weeks = chunkWeeks(dates);
+    let month = chunkWeeks(dates).reduce(function(pMonth, cMonth, i) {
+        let weekHtml = cMonth.reduce(function(pDate, cDate) {
+            return pDate += cDate === null ? '<li class="date none"></li>' : cDate.constructTile();
+        }, '')
 
-    for (let i in weeks) {
-        let singleWeek = weeks[i];
-        let weekHtml = '';
-        for (let i in singleWeek) {
-            let date = singleWeek[i];
-            let week = date === null ? '<li class="date none"></li>' : date.constructTile();
-            weekHtml += week;
-        }
-        month.push('<ul class="week-' + i + '">' + weekHtml + '</ul>');
-    }
+        pMonth.push('<ul class="week week-' + i + '">' + weekHtml + '</ul>');
+        return pMonth;
+    }, []);
 
     return '<div class="' + monthName + '">' + month.join('') + '</div>';
 }

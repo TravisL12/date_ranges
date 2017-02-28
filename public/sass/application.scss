@@ -9,28 +9,31 @@ ul {
     padding: 0;
 }
 
-#json-dates {
-    clear: both;
+@mixin loop-colors($color) {
+    @for $i from 0 through 5 {
+        .week-#{$i} .date {
+          background: darken($color, $i*5);
+          &.none { background: transparent; }
+        }
+    }
+}
+
+.calendar {
     padding: 5px;
 }
 
-.week {
-    display: inline-block;
-    width: 100%;
-}
-
-.january   .date { background: cadetblue; }
-.february  .date { background: lightblue; }
-.march     .date { background: lime; }
-.april     .date { background: red; }
-.may       .date { background: blue; }
-.june      .date { background: purple; }
-.july      .date { background: blanchedalmond; }
-.august    .date { background: pink; }
-.september .date { background: wheat; }
-.october   .date { background: green; }
-.november  .date { background: cyan; }
-.december  .date { background: coral; }
+.january   { @include loop-colors(cadetblue); }
+.february  { @include loop-colors(lightblue); }
+.march     { @include loop-colors(lime); }
+.april     { @include loop-colors(red); }
+.may       { @include loop-colors(blue); }
+.june      { @include loop-colors(purple); }
+.july      { @include loop-colors(blanchedalmond); }
+.august    { @include loop-colors(pink); }
+.september { @include loop-colors(wheat); }
+.october   { @include loop-colors(green); }
+.november  { @include loop-colors(cyan); }
+.december  { @include loop-colors(coral); }
 
 .date {
     position: relative;
@@ -62,6 +65,4 @@ ul {
         bottom: 2px;
         right: 4px;
     }
-
-    &.none { background: transparent; }
 }
