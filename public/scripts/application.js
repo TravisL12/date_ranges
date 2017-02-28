@@ -39,8 +39,8 @@ let startDateEl  = document.getElementById('start'),
     endDateEl    = document.getElementById('end'),
     dateSubmit   = document.getElementById('submit-dates'),
     outputEl     = document.getElementById('json-dates'),
-    defaultEnd   = new Date('2016', '11', '31'),
-    defaultStart = new Date('2016', '0', '1');
+    defaultEnd   = new Date(),
+    defaultStart = new Date(defaultEnd.getFullYear(), '0', '1');
 
 startDateEl.value = new DateTile(defaultStart).dateString();
 endDateEl.value   = new DateTile(defaultEnd).dateString();
@@ -70,7 +70,7 @@ function constructWeeks (dates) {
         let list = date === null ? '<li class="date"></li>' : date.constructTile();
         week.push(list);
     }
-    return '<span class="clearfix"><ul>' + week.join('') + '</ul>';
+    return '<ul class="clearfix">' + week.join('') + '</ul>';
 }
 
 function getDateRange() {

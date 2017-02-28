@@ -1,14 +1,15 @@
 body {
     width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 #json-dates {
+    clear: both;
     padding: 5px;
 }
 
 .clearfix {
-    display: block;
     clear: both;
 }
 
@@ -21,7 +22,6 @@ body {
     height: 130px;
     margin: 0 5px 5px 0;
     padding: 2px 5px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
 .date .day {
