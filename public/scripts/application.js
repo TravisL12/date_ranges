@@ -104,7 +104,7 @@ let startDateEl  = document.getElementById('start'),
     countEl      = document.getElementById('date-count'),
     outputEl     = document.getElementById('json-dates'),
     defaultEnd   = new Date(),
-    defaultStart = new Date(defaultEnd.getFullYear(), '0', '1');
+    defaultStart = new Date(defaultEnd.getFullYear() - 1, defaultEnd.getMonth(), '1');
 
 startDateEl.value = new DateTile(defaultStart).dateString();
 endDateEl.value   = new DateTile(defaultEnd).dateString();

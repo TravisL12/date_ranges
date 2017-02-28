@@ -18,22 +18,35 @@ ul {
     }
 }
 
+$january: cadetblue;
+$february: lightblue;
+$march: lime;
+$april: red;
+$may: blue;
+$june: purple;
+$july: blanchedalmond;
+$august: pink;
+$september: wheat;
+$october: green;
+$november: cyan;
+$december: coral;
+
 .calendar {
     padding: 5px;
 }
 
-.january   { @include loop-colors(cadetblue); }
-.february  { @include loop-colors(lightblue); }
-.march     { @include loop-colors(lime); }
-.april     { @include loop-colors(red); }
-.may       { @include loop-colors(blue); }
-.june      { @include loop-colors(purple); }
-.july      { @include loop-colors(blanchedalmond); }
-.august    { @include loop-colors(pink); }
-.september { @include loop-colors(wheat); }
-.october   { @include loop-colors(green); }
-.november  { @include loop-colors(cyan); }
-.december  { @include loop-colors(coral); }
+.january   { @include loop-colors($january); }
+.february  { @include loop-colors($february); }
+.march     { @include loop-colors($march); }
+.april     { @include loop-colors($april); }
+.may       { @include loop-colors($may); }
+.june      { @include loop-colors($june); }
+.july      { @include loop-colors($july); }
+.august    { @include loop-colors($august); }
+.september { @include loop-colors($september); }
+.october   { @include loop-colors($october); }
+.november  { @include loop-colors($november); }
+.december  { @include loop-colors($december); }
 
 .date {
     position: relative;
