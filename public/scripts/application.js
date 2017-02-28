@@ -38,6 +38,7 @@ DateTile.prototype = {
 let startDateEl  = document.getElementById('start'),
     endDateEl    = document.getElementById('end'),
     dateSubmit   = document.getElementById('submit-dates'),
+    countEl      = document.getElementById('date-count'),
     outputEl     = document.getElementById('json-dates'),
     defaultEnd   = new Date(),
     defaultStart = new Date(defaultEnd.getFullYear(), '0', '1');
@@ -75,10 +76,12 @@ function constructWeeks (dates) {
 
 function getDateRange() {
     let start = new Date(startDateEl.value),
-        end   = new Date(endDateEl.value);
+        end   = new Date(endDateEl.value),
+        count = 0;
 
     let daysOfYear = {};
     for (let d = start; d <= end; d.setDate(d.getDate() + 1)) {
+        count++;
         let date = new DateTile(new Date(d));
         if (!daysOfYear.hasOwnProperty(date.year)) {
             daysOfYear[date.year] = {};
@@ -98,5 +101,6 @@ function getDateRange() {
         }
     }
 
+    countEl.textContent = 'Day Count: ' + count;
     outputEl.innerHTML = output;
 }
