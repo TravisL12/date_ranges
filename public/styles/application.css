@@ -1,13 +1,21 @@
-#json-dates {
+body {
     width: 1200px;
     margin: 0 auto;
+}
+
+#json-dates {
     padding: 5px;
-    font-size: 0; /*removes inline-block gap*/
+}
+
+.clearfix {
+    display: block;
+    clear: both;
 }
 
 .date {
+    list-style: none;
     position: relative;
-    display: inline-block;
+    float: left;
     font-size: 14px;
     width: 130px;
     height: 130px;

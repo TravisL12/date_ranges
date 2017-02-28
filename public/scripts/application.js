@@ -35,7 +35,7 @@ DateTile.prototype = {
     }
 }
 
-var startDateEl  = document.getElementById('start'),
+let startDateEl  = document.getElementById('start'),
     endDateEl    = document.getElementById('end'),
     dateSubmit   = document.getElementById('submit-dates'),
     outputEl     = document.getElementById('json-dates'),
@@ -48,37 +48,55 @@ getDateRange();
 
 dateSubmit.addEventListener('click', getDateRange);
 
-function constructWeek (dates) {
-    var week = [];
+function checkForMonthEnd (dates) {
+    if (dates[0]) {
+        let currentMonth = dates[0].monthName;
+    }
+    return dates.filter(function(date) {
+        return date.monthName === currentMonth;
+    });
+}
+
+function constructWeeks (dates) {
+    let firstDay = dates[0].dow;
+    let week = [];
+    if (firstDay > 0) {
+        let weekPad = new Array(firstDay).fill(null);
+        dates = weekPad.concat(dates);
+    }
+
     for (let i in dates) {
         let date = dates[i];
-        if (date === null) {
-            week.push('<li class="date"></li>')
-        } else {
-            week.push(date.constructTile());
-        }
+        let list = date === null ? '<li class="date"></li>' : date.constructTile();
+        week.push(list);
     }
-    return '<ul>' + week.join('') + '</ul>';
+    return '<span class="clearfix"><ul>' + week.join('') + '</ul>';
 }
 
 function getDateRange() {
     let start = new Date(startDateEl.value),
         end   = new Date(endDateEl.value);
 
-    let daysOfYear = [];
+    let daysOfYear = {};
     for (let d = start; d <= end; d.setDate(d.getDate() + 1)) {
-        daysOfYear.push(new DateTile(new Date(d)));
+        let date = new DateTile(new Date(d));
+        if (!daysOfYear.hasOwnProperty(date.year)) {
+            daysOfYear[date.year] = {};
+        }
+        if (!daysOfYear[date.year].hasOwnProperty(date.month)) {
+            daysOfYear[date.year][date.month] = [];
+        }
+        daysOfYear[date.year][date.month].push(date);
     }
 
-    let firstDay = daysOfYear[0].dow;
-    if (firstDay > 0) {
-        let weekPad = new Array(firstDay).fill(null);
-        daysOfYear = weekPad.concat(daysOfYear);
+    let output = '';
+    for (let i in daysOfYear) {
+        let year = daysOfYear[i];
+        for (let j in year) {
+            let month = year[j];
+            output += constructWeeks(month);
+        }
     }
 
-    let weeksOfYear = [];
-    while (daysOfYear.length > 0) {
-        weeksOfYear.push(constructWeek(daysOfYear.splice(0,7)));
-    }
-    outputEl.innerHTML = weeksOfYear.join(' ');
+    outputEl.innerHTML = output;
 }
