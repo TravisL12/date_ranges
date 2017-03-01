@@ -7,308 +7,452 @@ ul {
   margin: 0;
   padding: 0; }
 
-.calendar {
-  padding: 5px; }
-
 .january .week-0 .date {
   background: cadetblue; }
-  .january .week-0 .date.none {
+  .january .week-0 .date:hover {
+    background: cadetblue; }
+  .january .week-0 .date.none, .january .week-0 .date.none:hover {
     background: transparent; }
 .january .week-1 .date {
   background: #568e90; }
-  .january .week-1 .date.none {
+  .january .week-1 .date:hover {
+    background: cadetblue; }
+  .january .week-1 .date.none, .january .week-1 .date.none:hover {
     background: transparent; }
 .january .week-2 .date {
   background: #4c7e80; }
-  .january .week-2 .date.none {
+  .january .week-2 .date:hover {
+    background: cadetblue; }
+  .january .week-2 .date.none, .january .week-2 .date.none:hover {
     background: transparent; }
 .january .week-3 .date {
   background: #436f70; }
-  .january .week-3 .date.none {
+  .january .week-3 .date:hover {
+    background: cadetblue; }
+  .january .week-3 .date.none, .january .week-3 .date.none:hover {
     background: transparent; }
 .january .week-4 .date {
   background: #395f60; }
-  .january .week-4 .date.none {
+  .january .week-4 .date:hover {
+    background: cadetblue; }
+  .january .week-4 .date.none, .january .week-4 .date.none:hover {
     background: transparent; }
 .january .week-5 .date {
   background: #304f50; }
-  .january .week-5 .date.none {
+  .january .week-5 .date:hover {
+    background: cadetblue; }
+  .january .week-5 .date.none, .january .week-5 .date.none:hover {
     background: transparent; }
 
 .february .week-0 .date {
   background: lightblue; }
-  .february .week-0 .date.none {
+  .february .week-0 .date:hover {
+    background: lightblue; }
+  .february .week-0 .date.none, .february .week-0 .date.none:hover {
     background: transparent; }
 .february .week-1 .date {
   background: #99cfe0; }
-  .february .week-1 .date.none {
+  .february .week-1 .date:hover {
+    background: lightblue; }
+  .february .week-1 .date.none, .february .week-1 .date.none:hover {
     background: transparent; }
 .february .week-2 .date {
   background: #86c5da; }
-  .february .week-2 .date.none {
+  .february .week-2 .date:hover {
+    background: lightblue; }
+  .february .week-2 .date.none, .february .week-2 .date.none:hover {
     background: transparent; }
 .february .week-3 .date {
   background: #72bcd4; }
-  .february .week-3 .date.none {
+  .february .week-3 .date:hover {
+    background: lightblue; }
+  .february .week-3 .date.none, .february .week-3 .date.none:hover {
     background: transparent; }
 .february .week-4 .date {
   background: #5fb3ce; }
-  .february .week-4 .date.none {
+  .february .week-4 .date:hover {
+    background: lightblue; }
+  .february .week-4 .date.none, .february .week-4 .date.none:hover {
     background: transparent; }
 .february .week-5 .date {
   background: #4baac8; }
-  .february .week-5 .date.none {
+  .february .week-5 .date:hover {
+    background: lightblue; }
+  .february .week-5 .date.none, .february .week-5 .date.none:hover {
     background: transparent; }
 
 .march .week-0 .date {
   background: lime; }
-  .march .week-0 .date.none {
+  .march .week-0 .date:hover {
+    background: lime; }
+  .march .week-0 .date.none, .march .week-0 .date.none:hover {
     background: transparent; }
 .march .week-1 .date {
   background: #00e600; }
-  .march .week-1 .date.none {
+  .march .week-1 .date:hover {
+    background: lime; }
+  .march .week-1 .date.none, .march .week-1 .date.none:hover {
     background: transparent; }
 .march .week-2 .date {
   background: #00cc00; }
-  .march .week-2 .date.none {
+  .march .week-2 .date:hover {
+    background: lime; }
+  .march .week-2 .date.none, .march .week-2 .date.none:hover {
     background: transparent; }
 .march .week-3 .date {
   background: #00b300; }
-  .march .week-3 .date.none {
+  .march .week-3 .date:hover {
+    background: lime; }
+  .march .week-3 .date.none, .march .week-3 .date.none:hover {
     background: transparent; }
 .march .week-4 .date {
   background: #009900; }
-  .march .week-4 .date.none {
+  .march .week-4 .date:hover {
+    background: lime; }
+  .march .week-4 .date.none, .march .week-4 .date.none:hover {
     background: transparent; }
 .march .week-5 .date {
   background: green; }
-  .march .week-5 .date.none {
+  .march .week-5 .date:hover {
+    background: lime; }
+  .march .week-5 .date.none, .march .week-5 .date.none:hover {
     background: transparent; }
 
 .april .week-0 .date {
   background: magenta; }
-  .april .week-0 .date.none {
+  .april .week-0 .date:hover {
+    background: magenta; }
+  .april .week-0 .date.none, .april .week-0 .date.none:hover {
     background: transparent; }
 .april .week-1 .date {
   background: #e600e6; }
-  .april .week-1 .date.none {
+  .april .week-1 .date:hover {
+    background: magenta; }
+  .april .week-1 .date.none, .april .week-1 .date.none:hover {
     background: transparent; }
 .april .week-2 .date {
   background: #cc00cc; }
-  .april .week-2 .date.none {
+  .april .week-2 .date:hover {
+    background: magenta; }
+  .april .week-2 .date.none, .april .week-2 .date.none:hover {
     background: transparent; }
 .april .week-3 .date {
   background: #b300b3; }
-  .april .week-3 .date.none {
+  .april .week-3 .date:hover {
+    background: magenta; }
+  .april .week-3 .date.none, .april .week-3 .date.none:hover {
     background: transparent; }
 .april .week-4 .date {
   background: #990099; }
-  .april .week-4 .date.none {
+  .april .week-4 .date:hover {
+    background: magenta; }
+  .april .week-4 .date.none, .april .week-4 .date.none:hover {
     background: transparent; }
 .april .week-5 .date {
   background: purple; }
-  .april .week-5 .date.none {
+  .april .week-5 .date:hover {
+    background: magenta; }
+  .april .week-5 .date.none, .april .week-5 .date.none:hover {
     background: transparent; }
 
 .may .week-0 .date {
   background: blue; }
-  .may .week-0 .date.none {
+  .may .week-0 .date:hover {
+    background: blue; }
+  .may .week-0 .date.none, .may .week-0 .date.none:hover {
     background: transparent; }
 .may .week-1 .date {
   background: #0000e6; }
-  .may .week-1 .date.none {
+  .may .week-1 .date:hover {
+    background: blue; }
+  .may .week-1 .date.none, .may .week-1 .date.none:hover {
     background: transparent; }
 .may .week-2 .date {
   background: #0000cc; }
-  .may .week-2 .date.none {
+  .may .week-2 .date:hover {
+    background: blue; }
+  .may .week-2 .date.none, .may .week-2 .date.none:hover {
     background: transparent; }
 .may .week-3 .date {
   background: #0000b3; }
-  .may .week-3 .date.none {
+  .may .week-3 .date:hover {
+    background: blue; }
+  .may .week-3 .date.none, .may .week-3 .date.none:hover {
     background: transparent; }
 .may .week-4 .date {
   background: #000099; }
-  .may .week-4 .date.none {
+  .may .week-4 .date:hover {
+    background: blue; }
+  .may .week-4 .date.none, .may .week-4 .date.none:hover {
     background: transparent; }
 .may .week-5 .date {
   background: navy; }
-  .may .week-5 .date.none {
+  .may .week-5 .date:hover {
+    background: blue; }
+  .may .week-5 .date.none, .may .week-5 .date.none:hover {
     background: transparent; }
 
 .june .week-0 .date {
   background: purple; }
-  .june .week-0 .date.none {
+  .june .week-0 .date:hover {
+    background: purple; }
+  .june .week-0 .date.none, .june .week-0 .date.none:hover {
     background: transparent; }
 .june .week-1 .date {
   background: #670067; }
-  .june .week-1 .date.none {
+  .june .week-1 .date:hover {
+    background: purple; }
+  .june .week-1 .date.none, .june .week-1 .date.none:hover {
     background: transparent; }
 .june .week-2 .date {
   background: #4d004d; }
-  .june .week-2 .date.none {
+  .june .week-2 .date:hover {
+    background: purple; }
+  .june .week-2 .date.none, .june .week-2 .date.none:hover {
     background: transparent; }
 .june .week-3 .date {
   background: #340034; }
-  .june .week-3 .date.none {
+  .june .week-3 .date:hover {
+    background: purple; }
+  .june .week-3 .date.none, .june .week-3 .date.none:hover {
     background: transparent; }
 .june .week-4 .date {
   background: #1a001a; }
-  .june .week-4 .date.none {
+  .june .week-4 .date:hover {
+    background: purple; }
+  .june .week-4 .date.none, .june .week-4 .date.none:hover {
     background: transparent; }
 .june .week-5 .date {
   background: #010001; }
-  .june .week-5 .date.none {
+  .june .week-5 .date:hover {
+    background: purple; }
+  .june .week-5 .date.none, .june .week-5 .date.none:hover {
     background: transparent; }
 
 .july .week-0 .date {
   background: blanchedalmond; }
-  .july .week-0 .date.none {
+  .july .week-0 .date:hover {
+    background: blanchedalmond; }
+  .july .week-0 .date.none, .july .week-0 .date.none:hover {
     background: transparent; }
 .july .week-1 .date {
   background: #ffe1b4; }
-  .july .week-1 .date.none {
+  .july .week-1 .date:hover {
+    background: blanchedalmond; }
+  .july .week-1 .date.none, .july .week-1 .date.none:hover {
     background: transparent; }
 .july .week-2 .date {
   background: #ffd79a; }
-  .july .week-2 .date.none {
+  .july .week-2 .date:hover {
+    background: blanchedalmond; }
+  .july .week-2 .date.none, .july .week-2 .date.none:hover {
     background: transparent; }
 .july .week-3 .date {
   background: #ffcc81; }
-  .july .week-3 .date.none {
+  .july .week-3 .date:hover {
+    background: blanchedalmond; }
+  .july .week-3 .date.none, .july .week-3 .date.none:hover {
     background: transparent; }
 .july .week-4 .date {
   background: #ffc267; }
-  .july .week-4 .date.none {
+  .july .week-4 .date:hover {
+    background: blanchedalmond; }
+  .july .week-4 .date.none, .july .week-4 .date.none:hover {
     background: transparent; }
 .july .week-5 .date {
   background: #ffb84e; }
-  .july .week-5 .date.none {
+  .july .week-5 .date:hover {
+    background: blanchedalmond; }
+  .july .week-5 .date.none, .july .week-5 .date.none:hover {
     background: transparent; }
 
 .august .week-0 .date {
   background: pink; }
-  .august .week-0 .date.none {
+  .august .week-0 .date:hover {
+    background: pink; }
+  .august .week-0 .date.none, .august .week-0 .date.none:hover {
     background: transparent; }
 .august .week-1 .date {
   background: #ffa7b6; }
-  .august .week-1 .date.none {
+  .august .week-1 .date:hover {
+    background: pink; }
+  .august .week-1 .date.none, .august .week-1 .date.none:hover {
     background: transparent; }
 .august .week-2 .date {
   background: #ff8da1; }
-  .august .week-2 .date.none {
+  .august .week-2 .date:hover {
+    background: pink; }
+  .august .week-2 .date.none, .august .week-2 .date.none:hover {
     background: transparent; }
 .august .week-3 .date {
   background: #ff748c; }
-  .august .week-3 .date.none {
+  .august .week-3 .date:hover {
+    background: pink; }
+  .august .week-3 .date.none, .august .week-3 .date.none:hover {
     background: transparent; }
 .august .week-4 .date {
   background: #ff5a77; }
-  .august .week-4 .date.none {
+  .august .week-4 .date:hover {
+    background: pink; }
+  .august .week-4 .date.none, .august .week-4 .date.none:hover {
     background: transparent; }
 .august .week-5 .date {
   background: #ff4162; }
-  .august .week-5 .date.none {
+  .august .week-5 .date:hover {
+    background: pink; }
+  .august .week-5 .date.none, .august .week-5 .date.none:hover {
     background: transparent; }
 
 .september .week-0 .date {
   background: wheat; }
-  .september .week-0 .date.none {
+  .september .week-0 .date:hover {
+    background: wheat; }
+  .september .week-0 .date.none, .september .week-0 .date.none:hover {
     background: transparent; }
 .september .week-1 .date {
   background: #f2d49c; }
-  .september .week-1 .date.none {
+  .september .week-1 .date:hover {
+    background: wheat; }
+  .september .week-1 .date.none, .september .week-1 .date.none:hover {
     background: transparent; }
 .september .week-2 .date {
   background: #efca86; }
-  .september .week-2 .date.none {
+  .september .week-2 .date:hover {
+    background: wheat; }
+  .september .week-2 .date.none, .september .week-2 .date.none:hover {
     background: transparent; }
 .september .week-3 .date {
   background: #ecc16f; }
-  .september .week-3 .date.none {
+  .september .week-3 .date:hover {
+    background: wheat; }
+  .september .week-3 .date.none, .september .week-3 .date.none:hover {
     background: transparent; }
 .september .week-4 .date {
   background: #e9b759; }
-  .september .week-4 .date.none {
+  .september .week-4 .date:hover {
+    background: wheat; }
+  .september .week-4 .date.none, .september .week-4 .date.none:hover {
     background: transparent; }
 .september .week-5 .date {
   background: #e6ad42; }
-  .september .week-5 .date.none {
+  .september .week-5 .date:hover {
+    background: wheat; }
+  .september .week-5 .date.none, .september .week-5 .date.none:hover {
     background: transparent; }
 
 .october .week-0 .date {
   background: green; }
-  .october .week-0 .date.none {
+  .october .week-0 .date:hover {
+    background: green; }
+  .october .week-0 .date.none, .october .week-0 .date.none:hover {
     background: transparent; }
 .october .week-1 .date {
   background: #006700; }
-  .october .week-1 .date.none {
+  .october .week-1 .date:hover {
+    background: green; }
+  .october .week-1 .date.none, .october .week-1 .date.none:hover {
     background: transparent; }
 .october .week-2 .date {
   background: #004d00; }
-  .october .week-2 .date.none {
+  .october .week-2 .date:hover {
+    background: green; }
+  .october .week-2 .date.none, .october .week-2 .date.none:hover {
     background: transparent; }
 .october .week-3 .date {
   background: #003400; }
-  .october .week-3 .date.none {
+  .october .week-3 .date:hover {
+    background: green; }
+  .october .week-3 .date.none, .october .week-3 .date.none:hover {
     background: transparent; }
 .october .week-4 .date {
   background: #001a00; }
-  .october .week-4 .date.none {
+  .october .week-4 .date:hover {
+    background: green; }
+  .october .week-4 .date.none, .october .week-4 .date.none:hover {
     background: transparent; }
 .october .week-5 .date {
   background: #000100; }
-  .october .week-5 .date.none {
+  .october .week-5 .date:hover {
+    background: green; }
+  .october .week-5 .date.none, .october .week-5 .date.none:hover {
     background: transparent; }
 
 .november .week-0 .date {
   background: cyan; }
-  .november .week-0 .date.none {
+  .november .week-0 .date:hover {
+    background: cyan; }
+  .november .week-0 .date.none, .november .week-0 .date.none:hover {
     background: transparent; }
 .november .week-1 .date {
   background: #00e6e6; }
-  .november .week-1 .date.none {
+  .november .week-1 .date:hover {
+    background: cyan; }
+  .november .week-1 .date.none, .november .week-1 .date.none:hover {
     background: transparent; }
 .november .week-2 .date {
   background: #00cccc; }
-  .november .week-2 .date.none {
+  .november .week-2 .date:hover {
+    background: cyan; }
+  .november .week-2 .date.none, .november .week-2 .date.none:hover {
     background: transparent; }
 .november .week-3 .date {
   background: #00b3b3; }
-  .november .week-3 .date.none {
+  .november .week-3 .date:hover {
+    background: cyan; }
+  .november .week-3 .date.none, .november .week-3 .date.none:hover {
     background: transparent; }
 .november .week-4 .date {
   background: #009999; }
-  .november .week-4 .date.none {
+  .november .week-4 .date:hover {
+    background: cyan; }
+  .november .week-4 .date.none, .november .week-4 .date.none:hover {
     background: transparent; }
 .november .week-5 .date {
   background: teal; }
-  .november .week-5 .date.none {
+  .november .week-5 .date:hover {
+    background: cyan; }
+  .november .week-5 .date.none, .november .week-5 .date.none:hover {
     background: transparent; }
 
 .december .week-0 .date {
   background: coral; }
-  .december .week-0 .date.none {
+  .december .week-0 .date:hover {
+    background: coral; }
+  .december .week-0 .date.none, .december .week-0 .date.none:hover {
     background: transparent; }
 .december .week-1 .date {
   background: #ff6c37; }
-  .december .week-1 .date.none {
+  .december .week-1 .date:hover {
+    background: coral; }
+  .december .week-1 .date.none, .december .week-1 .date.none:hover {
     background: transparent; }
 .december .week-2 .date {
   background: #ff5a1d; }
-  .december .week-2 .date.none {
+  .december .week-2 .date:hover {
+    background: coral; }
+  .december .week-2 .date.none, .december .week-2 .date.none:hover {
     background: transparent; }
 .december .week-3 .date {
   background: #ff4704; }
-  .december .week-3 .date.none {
+  .december .week-3 .date:hover {
+    background: coral; }
+  .december .week-3 .date.none, .december .week-3 .date.none:hover {
     background: transparent; }
 .december .week-4 .date {
   background: #e93f00; }
-  .december .week-4 .date.none {
+  .december .week-4 .date:hover {
+    background: coral; }
+  .december .week-4 .date.none, .december .week-4 .date.none:hover {
     background: transparent; }
 .december .week-5 .date {
   background: #d03800; }
-  .december .week-5 .date.none {
+  .december .week-5 .date:hover {
+    background: coral; }
+  .december .week-5 .date.none, .december .week-5 .date.none:hover {
     background: transparent; }
+
+.calendar {
+  padding: 5px; }
 
 .date {
   position: relative;
@@ -319,7 +463,8 @@ ul {
   height: 130px;
   margin: 0 5px 5px 0;
   padding: 2px 5px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  transition: 0.15s linear all; }
   .date .day {
     font-weight: 600;
     color: #dfdfdf;

@@ -12,8 +12,13 @@ ul {
 @mixin loop-colors($color) {
     @for $i from 0 through 5 {
         .week-#{$i} .date {
-          background: darken($color, $i * 5);
-          &.none { background: transparent; }
+          $background: darken($color, $i * 5);
+          background: $background;
+          &:hover {
+            background: $color;
+          }
+          &.none,
+          &.none:hover { background: transparent; }
         }
     }
 }
@@ -31,10 +36,6 @@ $october:   green;
 $november:  cyan;
 $december:  coral;
 
-.calendar {
-    padding: 5px;
-}
-
 .january   { @include loop-colors($january); }
 .february  { @include loop-colors($february); }
 .march     { @include loop-colors($march); }
@@ -48,6 +49,10 @@ $december:  coral;
 .november  { @include loop-colors($november); }
 .december  { @include loop-colors($december); }
 
+.calendar {
+    padding: 5px;
+}
+
 .date {
     position: relative;
     list-style: none;
@@ -58,6 +63,7 @@ $december:  coral;
     margin: 0 5px 5px 0;
     padding: 2px 5px;
     vertical-align: middle;
+    transition: 0.15s linear all;
 
     .day {
         font-weight: 600;
