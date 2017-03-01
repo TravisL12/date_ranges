@@ -86,27 +86,27 @@ ul {
     background: transparent; }
 
 .april .week-0 .date {
-  background: red; }
+  background: magenta; }
   .april .week-0 .date.none {
     background: transparent; }
 .april .week-1 .date {
-  background: #e60000; }
+  background: #e600e6; }
   .april .week-1 .date.none {
     background: transparent; }
 .april .week-2 .date {
-  background: #cc0000; }
+  background: #cc00cc; }
   .april .week-2 .date.none {
     background: transparent; }
 .april .week-3 .date {
-  background: #b30000; }
+  background: #b300b3; }
   .april .week-3 .date.none {
     background: transparent; }
 .april .week-4 .date {
-  background: #990000; }
+  background: #990099; }
   .april .week-4 .date.none {
     background: transparent; }
 .april .week-5 .date {
-  background: maroon; }
+  background: purple; }
   .april .week-5 .date.none {
     background: transparent; }
 

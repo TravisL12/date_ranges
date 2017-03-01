@@ -12,24 +12,24 @@ ul {
 @mixin loop-colors($color) {
     @for $i from 0 through 5 {
         .week-#{$i} .date {
-          background: darken($color, $i*5);
+          background: darken($color, $i * 5);
           &.none { background: transparent; }
         }
     }
 }
 
-$january: cadetblue;
-$february: lightblue;
-$march: lime;
-$april: red;
-$may: blue;
-$june: purple;
-$july: blanchedalmond;
-$august: pink;
+$january:   cadetblue;
+$february:  lightblue;
+$march:     lime;
+$april:     magenta;
+$may:       blue;
+$june:      purple;
+$july:      blanchedalmond;
+$august:    pink;
 $september: wheat;
-$october: green;
-$november: cyan;
-$december: coral;
+$october:   green;
+$november:  cyan;
+$december:  coral;
 
 .calendar {
     padding: 5px;
