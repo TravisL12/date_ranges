@@ -45,7 +45,7 @@ function chunkWeeks(dates) {
     return weeks;
 }
 
-function buildMonth (dates) {
+function buildWeeks (dates) {
     return chunkWeeks(dates).reduce((pMonth, cMonth, i) => {
         let weekHtml = cMonth.reduce((pDate, cDate) => {
             return pDate += cDate === null ? '<li class="date-tile none"></li>' : cDate.buildTile();
@@ -56,7 +56,7 @@ function buildMonth (dates) {
     }, []).join('');    
 }
 
-function buildWeeks (dates) {
+function buildMonth (dates) {
     let firstDay  = dates[0];
     if (firstDay.dow > 0) {
         let weekPad = new Array(firstDay.dow).fill(null);
@@ -68,7 +68,7 @@ function buildWeeks (dates) {
     }).join('');
 
     return  '<div class="month ' + firstDay.monthName.toLowerCase() + '">' +
-                '<div class="day-header">' + header + '</div>' + buildMonth(dates) + 
+                '<div class="day-header">' + header + '</div>' + buildWeeks(dates) +
             '</div>';
 }
 
@@ -96,7 +96,7 @@ function getDateRange() {
     let output = Object.keys(daysOfYear).reduce((output, year) => {
         for (let j in daysOfYear[year]) {
             let month = daysOfYear[year][j];
-            output += buildWeeks(month);
+            output += buildMonth(month);
         }
         return output;
     }, '');
