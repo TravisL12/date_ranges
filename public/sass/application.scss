@@ -1,9 +1,3 @@
-body {
-    width: 1200px;
-    margin: 10px auto;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -11,14 +5,16 @@ ul {
 
 @mixin loop-colors($color) {
     @for $i from 0 through 5 {
-        .week-#{$i} .date {
-          $background: darken($color, $i * 5);
-          background: $background;
-          &:hover {
-            background: $color;
-          }
-          &.none,
-          &.none:hover { background: transparent; }
+        .week-#{$i} .date-tile {
+            $background: darken($color, $i * 5);
+            background: $background;
+            &:hover {
+                background: $color;
+            }
+            &.none,
+            &.none:hover {
+                background: #fbfbfb;
+            }
         }
     }
 }
@@ -49,39 +45,66 @@ $december:  coral;
 .november  { @include loop-colors($november); }
 .december  { @include loop-colors($december); }
 
-.calendar {
-    padding: 5px;
+$tile-width: 140px;
+body {
+    width: 1200px;
+    margin: 10px auto;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.date {
-    position: relative;
-    list-style: none;
-    display: inline-block;
-    font-size: 14px;
-    width: 130px;
-    height: 130px;
-    margin: 0 5px 5px 0;
-    padding: 2px 5px;
-    vertical-align: middle;
-    transition: 0.15s linear all;
-
-    .day {
-        font-weight: 600;
-        color: #dfdfdf;
-        position: absolute;
-        font-size: 50px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        transform: translateY(-50%);
-        top: 50%;
-        left: 0;
-        right: 0;
+.calendar .month {
+    width: 1020px;
+    margin: 0 auto;
+    .day-header {
+        margin: 15px 0 5px;
+        div {
+            display: inline-block;
+            text-align: center;
+            width: $tile-width;
+            margin-right: 5px;
+            padding: 0 2px;
+            box-sizing: border-box;
+        }
     }
+    .week {
+        width: 1200px;
+        margin: 0 auto;
+        .date-tile {
+            position: relative;
+            border-radius: 3px;
+            box-sizing: border-box;
+            list-style: none;
+            display: inline-block;
+            font-size: 14px;
+            width: $tile-width;
+            height: $tile-width;
+            margin: 0 5px 5px 0;
+            padding: 2px 5px;
+            vertical-align: middle;
+            transition: 0.15s linear all;
+            &:hover {
+                border-radius: 0;
+            }
 
-    .year {
-        position: absolute;
-        bottom: 2px;
-        right: 4px;
+            .day {
+                font-weight: 600;
+                color: white;
+                position: absolute;
+                font-size: 75px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                transform: translateY(-50%);
+                top: 50%;
+                left: 0;
+                right: 0;
+            }
+
+            .year {
+                position: absolute;
+                bottom: 2px;
+                right: 4px;
+            }
+        }
     }
 }

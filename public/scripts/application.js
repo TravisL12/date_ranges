@@ -26,18 +26,18 @@ DateTile.prototype = {
         return [this.month + 1, this.day, this.year].join(delimiter);
     },
 
-    constructTile: function () {
-        let inner = '<div class="month">' + this.monthName + '</div>' +
-                    '<div class="day">' + this.day + '</div>' +
-                    '<div class="year">' + this.year + '</div>';
+    buildTile: function () {
+        let inner = '<div class="day">' + this.day + '</div>' +
+                    '<div class="year">' + this.monthName + ' ' + this.year + '</div>';
 
-        return '<li class="date">' + inner + '</li>'
+        return '<li class="date-tile">' + inner + '</li>'
     }
 }
 
 function chunkWeeks(dates) {
     let weeks = [];
-    for (var i = 0; i < 5; i++) {
+    let weekCount = Math.ceil(dates.length / 7);
+    for (var i = 0; i < weekCount; i++) {
         let weekIdx = i * 7;
         let days = dates.slice(weekIdx, weekIdx + 7);
         if (days.length) {
@@ -47,24 +47,33 @@ function chunkWeeks(dates) {
     return weeks;
 }
 
-function constructWeeks (dates) {
-    let firstDay = dates[0].dow;
-    let monthName = dates[0].monthName.toLowerCase();
-    if (firstDay > 0) {
-        let weekPad = new Array(firstDay).fill(null);
-        dates = weekPad.concat(dates);
-    }
-
-    let month = chunkWeeks(dates).reduce(function(pMonth, cMonth, i) {
+function buildMonth (dates) {
+    return chunkWeeks(dates).reduce(function(pMonth, cMonth, i) {
         let weekHtml = cMonth.reduce(function(pDate, cDate) {
-            return pDate += cDate === null ? '<li class="date none"></li>' : cDate.constructTile();
+            return pDate += cDate === null ? '<li class="date-tile none"></li>' : cDate.buildTile();
         }, '')
 
         pMonth.push('<ul class="week week-' + i + '">' + weekHtml + '</ul>');
         return pMonth;
-    }, []);
+    }, []).join('');    
+}
 
-    return '<div class="' + monthName + '">' + month.join('') + '</div>';
+function buildWeeks (dates) {
+    let firstDay  = dates[0];
+    let monthName = firstDay.monthName;
+    if (firstDay.dow > 0) {
+        let weekPad = new Array(firstDay.dow).fill(null);
+        dates = weekPad.concat(dates);
+    }
+
+    let month = buildMonth(dates);
+    let header = dayNames.map((day) => {
+        return '<div>' + day + '</div>';
+    }).join('');
+
+    return  '<div class="month ' + monthName.toLowerCase() + '">' +
+                '<div class="day-header">' + header + '</div>' + month + 
+            '</div>';
 }
 
 function getDateRange() {
@@ -90,7 +99,7 @@ function getDateRange() {
         let year = daysOfYear[i];
         for (let j in year) {
             let month = year[j];
-            output += constructWeeks(month);
+            output += buildWeeks(month);
         }
     }
 
