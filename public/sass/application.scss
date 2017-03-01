@@ -19,6 +19,7 @@ ul {
     }
 }
 
+// Colors for tiles of months
 $january:   cadetblue;
 $february:  lightblue;
 $march:     lime;
@@ -59,10 +60,10 @@ body {
         margin: 15px 0 5px;
         div {
             display: inline-block;
-            text-align: center;
             width: $tile-width;
             margin-right: 5px;
             padding: 0 2px;
+            text-align: center;
             box-sizing: border-box;
         }
     }
@@ -71,20 +72,18 @@ body {
         margin: 0 auto;
         .date-tile {
             position: relative;
+            display: inline-block;
+            margin: 0 5px 5px 0;
+            padding: 2px 5px;
+            width: $tile-width;
+            height: $tile-width;
+            font-size: 14px;
             border-radius: 3px;
             box-sizing: border-box;
             list-style: none;
-            display: inline-block;
-            font-size: 14px;
-            width: $tile-width;
-            height: $tile-width;
-            margin: 0 5px 5px 0;
-            padding: 2px 5px;
             vertical-align: middle;
             transition: 0.15s linear all;
-            &:hover {
-                border-radius: 0;
-            }
+            &:hover { border-radius: 0; }
 
             .day {
                 font-weight: 600;

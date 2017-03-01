@@ -458,25 +458,25 @@ body {
     margin: 15px 0 5px; }
     .calendar .month .day-header div {
       display: inline-block;
-      text-align: center;
       width: 140px;
       margin-right: 5px;
       padding: 0 2px;
+      text-align: center;
       box-sizing: border-box; }
   .calendar .month .week {
     width: 1200px;
     margin: 0 auto; }
     .calendar .month .week .date-tile {
       position: relative;
+      display: inline-block;
+      margin: 0 5px 5px 0;
+      padding: 2px 5px;
+      width: 140px;
+      height: 140px;
+      font-size: 14px;
       border-radius: 3px;
       box-sizing: border-box;
       list-style: none;
-      display: inline-block;
-      font-size: 14px;
-      width: 140px;
-      height: 140px;
-      margin: 0 5px 5px 0;
-      padding: 2px 5px;
       vertical-align: middle;
       transition: 0.15s linear all; }
       .calendar .month .week .date-tile:hover {

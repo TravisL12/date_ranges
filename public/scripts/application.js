@@ -40,16 +40,14 @@ function chunkWeeks(dates) {
     for (var i = 0; i < weekCount; i++) {
         let weekIdx = i * 7;
         let days = dates.slice(weekIdx, weekIdx + 7);
-        if (days.length) {
-            weeks.push(days);
-        }
+        weeks.push(days);
     }
     return weeks;
 }
 
 function buildMonth (dates) {
-    return chunkWeeks(dates).reduce(function(pMonth, cMonth, i) {
-        let weekHtml = cMonth.reduce(function(pDate, cDate) {
+    return chunkWeeks(dates).reduce((pMonth, cMonth, i) => {
+        let weekHtml = cMonth.reduce((pDate, cDate) => {
             return pDate += cDate === null ? '<li class="date-tile none"></li>' : cDate.buildTile();
         }, '')
 
@@ -60,19 +58,17 @@ function buildMonth (dates) {
 
 function buildWeeks (dates) {
     let firstDay  = dates[0];
-    let monthName = firstDay.monthName;
     if (firstDay.dow > 0) {
         let weekPad = new Array(firstDay.dow).fill(null);
         dates = weekPad.concat(dates);
     }
 
-    let month = buildMonth(dates);
     let header = dayNames.map((day) => {
         return '<div>' + day + '</div>';
     }).join('');
 
-    return  '<div class="month ' + monthName.toLowerCase() + '">' +
-                '<div class="day-header">' + header + '</div>' + month + 
+    return  '<div class="month ' + firstDay.monthName.toLowerCase() + '">' +
+                '<div class="day-header">' + header + '</div>' + buildMonth(dates) + 
             '</div>';
 }
 
@@ -82,26 +78,28 @@ function getDateRange() {
         count = 0;
 
     let daysOfYear = {};
-    for (let d = start; d <= end; d.setDate(d.getDate() + 1)) {
+    for (let date = start; date <= end; date.setDate(date.getDate() + 1)) {
+        let tile = new DateTile(new Date(date));
+
+        if (!daysOfYear.hasOwnProperty(tile.year)) {
+            daysOfYear[tile.year] = {};
+        }
+
+        if (!daysOfYear[tile.year].hasOwnProperty(tile.month)) {
+            daysOfYear[tile.year][tile.month] = [];
+        }
+
+        daysOfYear[tile.year][tile.month].push(tile);
         count++;
-        let date = new DateTile(new Date(d));
-        if (!daysOfYear.hasOwnProperty(date.year)) {
-            daysOfYear[date.year] = {};
-        }
-        if (!daysOfYear[date.year].hasOwnProperty(date.month)) {
-            daysOfYear[date.year][date.month] = [];
-        }
-        daysOfYear[date.year][date.month].push(date);
     }
 
-    let output = '';
-    for (let i in daysOfYear) {
-        let year = daysOfYear[i];
-        for (let j in year) {
-            let month = year[j];
+    let output = Object.keys(daysOfYear).reduce((output, year) => {
+        for (let j in daysOfYear[year]) {
+            let month = daysOfYear[year][j];
             output += buildWeeks(month);
         }
-    }
+        return output;
+    }, '');
 
     countEl.textContent = 'Day Count: ' + count;
     outputEl.innerHTML = output;
