@@ -27,10 +27,7 @@ DateTile.prototype = {
     },
 
     buildTile: function () {
-        let inner = '<div class="day">' + this.day + '</div>' +
-                    '<div class="year">' + this.monthName + ' ' + this.year + '</div>';
-
-        return '<li class="date-tile">' + inner + '</li>'
+        return '<li class="week--tile"><div class="week--tile-day">' + this.day + '</div></li>'
     }
 }
 
@@ -48,7 +45,7 @@ function chunkWeeks(dates) {
 function buildWeeks (dates) {
     return chunkWeeks(dates).reduce((pMonth, cMonth, i) => {
         let weekHtml = cMonth.reduce((pDate, cDate) => {
-            return pDate += cDate === null ? '<li class="date-tile none"></li>' : cDate.buildTile();
+            return pDate += cDate === null ? '<li class="week--tile none"></li>' : cDate.buildTile();
         }, '')
 
         pMonth.push('<ul class="week week-' + i + '">' + weekHtml + '</ul>');
@@ -64,18 +61,20 @@ function buildMonth (dates) {
     }
 
     let header = dayNames.map((day) => {
-        return '<div>' + day + '</div>';
+        return '<div class="month--header-day">' + day + '</div>';
     }).join('');
 
     return  '<div class="month ' + firstDay.monthName.toLowerCase() + '">' +
-                '<div class="day-header">' + header + '</div>' + buildWeeks(dates) +
+                '<div class="month--name">' + firstDay.monthName + ' ' + firstDay.year + '</div>' +
+                '<div class="month--header">' + header + '</div>' +
+                buildWeeks(dates) +
             '</div>';
 }
 
 function getDateRange() {
     let start = new Date(startDateEl.value),
         end   = new Date(endDateEl.value),
-        count = 0;
+        countDays = 0;
 
     let daysOfYear = {};
     for (let date = start; date <= end; date.setDate(date.getDate() + 1)) {
@@ -90,7 +89,7 @@ function getDateRange() {
         }
 
         daysOfYear[tile.year][tile.month].push(tile);
-        count++;
+        countDays++;
     }
 
     let output = Object.keys(daysOfYear).reduce((output, year) => {
@@ -101,7 +100,7 @@ function getDateRange() {
         return output;
     }, '');
 
-    countEl.textContent = 'Day Count: ' + count;
+    countEl.textContent = 'Day Count: ' + countDays;
     outputEl.innerHTML = output;
 }
 

@@ -3,9 +3,14 @@ ul {
     padding: 0;
 }
 
+$light-gray: #fbfbfb;
 @mixin loop-colors($color) {
+    .month--name,
+    .month--header {
+        color: $color;
+    }
     @for $i from 0 through 5 {
-        .week-#{$i} .date-tile {
+        .week-#{$i} .week--tile {
             $background: darken($color, $i * 5);
             background: $background;
             &:hover {
@@ -13,7 +18,7 @@ ul {
             }
             &.none,
             &.none:hover {
-                background: #fbfbfb;
+                background: transparent;
             }
         }
     }
@@ -26,7 +31,7 @@ $march:     lime;
 $april:     magenta;
 $may:       blue;
 $june:      purple;
-$july:      blanchedalmond;
+$july:      burlywood;
 $august:    pink;
 $september: wheat;
 $october:   green;
@@ -54,12 +59,19 @@ body {
 }
 
 .calendar .month {
+    position: relative;
     width: 1020px;
-    margin: 0 auto;
-    .day-header {
-        margin: 15px 0 5px;
-        div {
+    margin: 15px auto 0;
+    .month--name {
+        font-size: 50px;
+        font-weight: bold;
+        text-align: right;
+    }
+    .month--header {
+        margin-bottom: 5px;
+        .month--header-day {
             display: inline-block;
+            font-weight: bold;
             width: $tile-width;
             margin-right: 5px;
             padding: 0 2px;
@@ -67,43 +79,39 @@ body {
             box-sizing: border-box;
         }
     }
-    .week {
-        width: 1200px;
-        margin: 0 auto;
-        .date-tile {
-            position: relative;
-            display: inline-block;
-            margin: 0 5px 5px 0;
-            padding: 2px 5px;
-            width: $tile-width;
-            height: $tile-width;
-            font-size: 14px;
-            border-radius: 3px;
-            box-sizing: border-box;
-            list-style: none;
-            vertical-align: middle;
-            transition: 0.15s linear all;
-            &:hover { border-radius: 0; }
+    .week .week--tile {
+        position: relative;
+        display: inline-block;
+        margin: 0 5px 5px 0;
+        padding: 2px 5px;
+        width: $tile-width;
+        height: $tile-width;
+        font-size: 14px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        list-style: none;
+        vertical-align: middle;
+        transition: 0.15s linear all;
+        &:hover { border-radius: 0; }
 
-            .day {
-                font-weight: 600;
-                color: white;
-                position: absolute;
-                font-size: 75px;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-                transform: translateY(-50%);
-                top: 50%;
-                left: 0;
-                right: 0;
-            }
+        .week--tile-day {
+            font-weight: 600;
+            color: white;
+            position: absolute;
+            font-size: 75px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 0;
+            right: 0;
+        }
 
-            .year {
-                position: absolute;
-                bottom: 2px;
-                right: 4px;
-            }
+        .week--tile-year {
+            position: absolute;
+            bottom: 2px;
+            right: 4px;
         }
     }
 }
