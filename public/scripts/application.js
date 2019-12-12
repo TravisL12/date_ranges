@@ -1,6 +1,6 @@
 "use strict";
 
-const monthNames = [
+const MONTH_NAMES = [
   "January",
   "February",
   "March",
@@ -15,7 +15,7 @@ const monthNames = [
   "December"
 ];
 
-const dayNames = [
+const DAY_NAMES = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -24,6 +24,10 @@ const dayNames = [
   "Friday",
   "Saturday"
 ];
+
+const WEEK_DAY_ELEMENTS = DAY_NAMES.map(
+  day => `<div class="month--header-day">${day}</div>`
+).join("");
 
 class DateTile {
   constructor(date) {
@@ -34,7 +38,7 @@ class DateTile {
   }
 
   get monthName() {
-    return monthNames[this.month];
+    return MONTH_NAMES[this.month];
   }
 
   dateString = delimiter => {
@@ -42,34 +46,14 @@ class DateTile {
     return [this.month + 1, this.day, this.year].join(delimiter);
   };
 
-  buildTile = () =>
-    `<li class="week--tile"><div class="week--tile-day">${this.day}</div></li>`;
+  buildTile = () => `<li class="week--tile">${this.day}</li>`;
 }
 
-function chunkWeeks(dates) {
-  let weeks = [];
-  let weekCount = Math.ceil(dates.length / 7);
-  for (var i = 0; i < weekCount; i++) {
-    let weekIdx = i * 7;
-    let days = dates.slice(weekIdx, weekIdx + 7);
-    weeks.push(days);
-  }
-  return weeks;
-}
-
-function buildWeeks(dates) {
-  return chunkWeeks(dates)
-    .reduce((pMonth, cMonth, i) => {
-      let weekHtml = cMonth.reduce((pDate, cDate) => {
-        return (pDate +=
-          cDate === null
-            ? '<li class="week--tile none"></li>'
-            : cDate.buildTile());
-      }, "");
-
-      pMonth.push(`<ul class="week week-${i}">${weekHtml}</ul>`);
-      return pMonth;
-    }, [])
+function buildMonthGrid(dates) {
+  return dates
+    .map(day =>
+      day === null ? '<li class="week--tile none"></li>' : day.buildTile()
+    )
     .join("");
 }
 
@@ -80,17 +64,11 @@ function buildMonth(dates) {
     dates = weekPad.concat(dates);
   }
 
-  let header = dayNames
-    .map(day => {
-      return `<div class="month--header-day">${day}</div>`;
-    })
-    .join("");
-
   return `
     <div class="month ${firstDay.monthName.toLowerCase()}">
         <div class="month--name">${firstDay.monthName} ${firstDay.year}</div>
-        <div class="month--header">${header}</div>
-        ${buildWeeks(dates)}
+        <div class="month--header">${WEEK_DAY_ELEMENTS}</div>
+        <ul class="month--grid">${buildMonthGrid(dates)}</ul>
     </div>`;
 }
 
@@ -127,7 +105,7 @@ function getDateRange() {
   outputEl.innerHTML = output;
 }
 
-let startDateEl = document.getElementById("start"),
+const startDateEl = document.getElementById("start"),
   endDateEl = document.getElementById("end"),
   dateSubmit = document.getElementById("submit-dates"),
   countEl = document.getElementById("date-count"),
