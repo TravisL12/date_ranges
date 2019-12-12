@@ -1,28 +1,5 @@
-ul {
-  margin: 0;
-  padding: 0;
-}
-
+$tile-width: 140px;
 $light-gray: #fbfbfb;
-@mixin loop-colors($color) {
-  .month--name,
-  .month--header {
-    color: $color;
-  }
-  @for $i from 0 through 5 {
-    .week--tile:nth-child(n + #{($i * 7) + 1}):nth-child(-n + #{($i * 7) + 7}) {
-      $background: darken($color, $i * 5);
-      background: $background;
-      &:hover {
-        background: $color;
-      }
-      &.none,
-      &.none:hover {
-        background: transparent;
-      }
-    }
-  }
-}
 
 // Colors for tiles of months
 $january: cadetblue;
@@ -38,6 +15,29 @@ $october: green;
 $november: cyan;
 $december: coral;
 
+@mixin loop-colors($color) {
+  .month--name,
+  .month--header {
+    color: $color;
+  }
+  @for $i from 0 through 5 {
+    $weekI: $i * 7;
+    $start: $weekI + 1;
+    $end: $weekI + 7;
+    $background: darken($color, $i * 5);
+
+    .week--tile:nth-child(n + #{$start}):nth-child(-n + #{$end}) {
+      background: $background;
+      &:hover {
+        background: $color;
+      }
+      &.none,
+      &.none:hover {
+        background: transparent;
+      }
+    }
+  }
+}
 .january {
   @include loop-colors($january);
 }
@@ -74,8 +74,6 @@ $december: coral;
 .december {
   @include loop-colors($december);
 }
-
-$tile-width: 140px;
 body {
   width: 1200px;
   margin: 10px auto;
@@ -84,9 +82,9 @@ body {
 }
 
 .calendar .month {
-  position: relative;
   width: 1020px;
   margin: 15px auto 0;
+
   .month--name {
     font-size: 50px;
     font-weight: bold;
@@ -94,6 +92,7 @@ body {
   }
   .month--header {
     margin-bottom: 5px;
+
     .month--header-day {
       display: inline-block;
       font-weight: bold;
@@ -104,11 +103,13 @@ body {
       box-sizing: border-box;
     }
   }
+
   .month--grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-gap: 5px;
   }
+
   .week--tile {
     display: flex;
     justify-content: center;
@@ -126,12 +127,6 @@ body {
 
     &:hover {
       border-radius: 0;
-    }
-
-    .week--tile-year {
-      position: absolute;
-      bottom: 2px;
-      right: 4px;
     }
   }
 }

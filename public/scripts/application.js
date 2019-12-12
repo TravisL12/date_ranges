@@ -30,7 +30,7 @@ const WEEK_DAY_ELEMENTS = DAY_NAMES.map(
 ).join("");
 
 class DateTile {
-  constructor(date) {
+  constructor(date = new Date()) {
     this.day = date.getDate();
     this.dow = date.getDay();
     this.month = date.getMonth();
@@ -46,13 +46,13 @@ class DateTile {
     return [this.month + 1, this.day, this.year].join(delimiter);
   };
 
-  buildTile = () => `<li class="week--tile">${this.day}</li>`;
+  buildTile = () => `<div class="week--tile">${this.day}</div>`;
 }
 
 function buildMonthGrid(dates) {
   return dates
     .map(day =>
-      day === null ? '<li class="week--tile none"></li>' : day.buildTile()
+      day === null ? '<div class="week--tile none"></div>' : day.buildTile()
     )
     .join("");
 }
@@ -68,7 +68,7 @@ function buildMonth(dates) {
     <div class="month ${firstDay.monthName.toLowerCase()}">
         <div class="month--name">${firstDay.monthName} ${firstDay.year}</div>
         <div class="month--header">${WEEK_DAY_ELEMENTS}</div>
-        <ul class="month--grid">${buildMonthGrid(dates)}</ul>
+        <div class="month--grid">${buildMonthGrid(dates)}</div>
     </div>`;
 }
 
@@ -79,7 +79,7 @@ function getDateRange() {
 
   const daysOfYear = {};
   for (let date = start; date <= end; date.setDate(date.getDate() + 1)) {
-    let tile = new DateTile(new Date(date));
+    const tile = new DateTile(new Date(date));
 
     if (!daysOfYear.hasOwnProperty(tile.year)) {
       daysOfYear[tile.year] = {};
@@ -105,19 +105,19 @@ function getDateRange() {
   outputEl.innerHTML = output;
 }
 
-const startDateEl = document.getElementById("start"),
-  endDateEl = document.getElementById("end"),
-  dateSubmit = document.getElementById("submit-dates"),
-  countEl = document.getElementById("date-count"),
-  outputEl = document.getElementById("json-dates"),
-  defaultEnd = new Date(),
-  defaultStart = new Date(
-    defaultEnd.getFullYear() - 1,
-    defaultEnd.getMonth(),
-    "1"
-  );
+const startDateEl = document.getElementById("start");
+const endDateEl = document.getElementById("end");
+const dateSubmit = document.getElementById("submit-dates");
+const countEl = document.getElementById("date-count");
+const outputEl = document.getElementById("json-dates");
+const defaultEnd = new Date();
+const defaultStart = new Date(
+  defaultEnd.getFullYear() - 1,
+  defaultEnd.getMonth(),
+  "1"
+);
 
 startDateEl.value = new DateTile(defaultStart).dateString();
-endDateEl.value = new DateTile(defaultEnd).dateString();
+endDateEl.value = new DateTile().dateString();
 dateSubmit.addEventListener("click", getDateRange);
 getDateRange();
