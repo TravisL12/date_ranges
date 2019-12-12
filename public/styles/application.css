@@ -707,53 +707,56 @@
 }
 
 body {
-  width: 1200px;
-  margin: 10px auto;
+  margin: 0;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.calendar .month {
-  width: 1020px;
-  margin: 15px auto 0;
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.calendar .month .month--name {
+
+.enter-dates {
+  width: 1000px;
+}
+
+.month--name {
   font-size: 50px;
   font-weight: bold;
   text-align: right;
 }
-.calendar .month .month--header {
-  margin-bottom: 5px;
+
+.month--header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
 }
-.calendar .month .month--header .month--header-day {
-  display: inline-block;
+.month--header .month--header-day {
   font-weight: bold;
   width: 140px;
-  margin-right: 5px;
-  padding: 0 2px;
   text-align: center;
-  box-sizing: border-box;
 }
-.calendar .month .month--grid {
+
+.month--grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 5px;
 }
-.calendar .month .week--tile {
+
+.week--tile {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 140px;
   height: 140px;
   border-radius: 3px;
-  box-sizing: border-box;
-  list-style: none;
-  vertical-align: middle;
   transition: 0.15s linear all;
   font-weight: 600;
   color: white;
   font-size: 75px;
 }
-.calendar .month .week--tile:hover {
+.week--tile:hover {
   border-radius: 0;
 }
 

@@ -35,10 +35,7 @@ class DateTile {
     this.dow = date.getDay();
     this.month = date.getMonth();
     this.year = date.getFullYear();
-  }
-
-  get monthName() {
-    return MONTH_NAMES[this.month];
+    this.monthName = MONTH_NAMES[this.month];
   }
 
   dateString = delimiter => {
