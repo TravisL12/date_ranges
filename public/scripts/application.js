@@ -29,35 +29,34 @@ const WEEK_DAY_ELEMENTS = DAY_NAMES.map(
   day => `<div class="month--header-day">${day}</div>`
 ).join("");
 
-class DateTile {
-  constructor(date = new Date()) {
-    this.day = date.getDate();
-    this.dow = date.getDay();
-    this.month = date.getMonth();
-    this.year = date.getFullYear();
-    this.monthName = MONTH_NAMES[this.month];
-  }
+function dateString({ month, day, year }) {
+  return [month + 1, day, year].join("/");
+}
 
-  dateString = delimiter => {
-    delimiter = delimiter || "/";
-    return [this.month + 1, this.day, this.year].join(delimiter);
+function dateTile(date) {
+  return {
+    day: date.getDate(),
+    dow: date.getDay(),
+    month: date.getMonth(),
+    year: date.getFullYear(),
+    monthName: MONTH_NAMES[date.getMonth()]
   };
-
-  buildTile = () => `<div class="week--tile">${this.day}</div>`;
 }
 
 function buildMonthGrid(dates) {
   return dates
-    .map(day =>
-      day === null ? '<div class="week--tile none"></div>' : day.buildTile()
+    .map(date =>
+      date === null
+        ? '<div class="week--tile none"></div>'
+        : `<div class="week--tile">${date.day}</div>`
     )
     .join("");
 }
 
 function buildMonth(dates) {
-  let firstDay = dates[0];
+  const firstDay = dates[0];
   if (firstDay.dow > 0) {
-    let weekPad = new Array(firstDay.dow).fill(null);
+    const weekPad = new Array(firstDay.dow).fill(null);
     dates = weekPad.concat(dates);
   }
 
@@ -76,7 +75,7 @@ function getDateRange() {
 
   const daysOfYear = {};
   for (let date = start; date <= end; date.setDate(date.getDate() + 1)) {
-    const tile = new DateTile(new Date(date));
+    const tile = dateTile(date);
 
     if (!daysOfYear.hasOwnProperty(tile.year)) {
       daysOfYear[tile.year] = {};
@@ -90,31 +89,28 @@ function getDateRange() {
     countDays++;
   }
 
-  let output = Object.keys(daysOfYear).reduce((output, year) => {
+  countEl.textContent = "Day Count: " + countDays;
+  calendarEl.innerHTML = Object.keys(daysOfYear).reduce((output, year) => {
     for (let j in daysOfYear[year]) {
       let month = daysOfYear[year][j];
       output += buildMonth(month);
     }
     return output;
   }, "");
-
-  countEl.textContent = "Day Count: " + countDays;
-  outputEl.innerHTML = output;
 }
 
 const startDateEl = document.getElementById("start");
 const endDateEl = document.getElementById("end");
 const dateSubmit = document.getElementById("submit-dates");
 const countEl = document.getElementById("date-count");
-const outputEl = document.getElementById("json-dates");
+const calendarEl = document.getElementById("json-dates");
 const defaultEnd = new Date();
 const defaultStart = new Date(
   defaultEnd.getFullYear() - 1,
-  defaultEnd.getMonth(),
-  "1"
+  defaultEnd.getMonth()
 );
 
-startDateEl.value = new DateTile(defaultStart).dateString();
-endDateEl.value = new DateTile().dateString();
+startDateEl.value = dateString(dateTile(defaultStart));
+endDateEl.value = dateString(dateTile(defaultEnd));
 dateSubmit.addEventListener("click", getDateRange);
 getDateRange();
