@@ -89,7 +89,7 @@ function getDateRange() {
     countDays++;
   }
 
-  countEl.textContent = "Day Count: " + countDays;
+  countEl.textContent = `Day Count: ${countDays}`;
   calendarEl.innerHTML = Object.keys(daysOfYear).reduce((output, year) => {
     for (let j in daysOfYear[year]) {
       let month = daysOfYear[year][j];

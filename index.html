@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Date Range</title>
-        <link rel='stylesheet' href='public/styles/application.css'></link>
-    </head>
-    <body>
-        <div class='calendar'>
-            <div class='enter-dates'>
-                <h1>Enter a date range!</h1>
-                <input type='text' id='start'>
-                <input type='text' id='end'>
-                <button id='submit-dates'>Get Range</button>
-                <div id='date-count'></div>
-            </div>
-            <div id='json-dates'></div>
+  <head>
+    <title>Date Range</title>
+    <link rel="stylesheet" href="public/styles/application.css" />
+  </head>
+  <body>
+    <div class="calendar">
+      <div class="calendar--date-input">
+        <h1>Enter a date range!</h1>
+        <div>
+          <label>Start Date</label>
+          <input type="text" id="start" />
         </div>
-    </body>
+        <div>
+          <label>End Date</label>
+          <input type="text" id="end" />
+        </div>
+        <button id="submit-dates">Get Range</button>
+        <div id="date-count"></div>
+      </div>
+      <div class="calendar--view" id="json-dates"></div>
+    </div>
+  </body>
 
-    <script src='public/scripts/application.js'></script>
+  <script src="public/scripts/application.js"></script>
 </html>

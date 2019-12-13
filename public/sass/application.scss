@@ -1,4 +1,4 @@
-$tile-width: 140px;
+$tile-width: 150px;
 $light-gray: #fbfbfb;
 
 // Colors for tiles of months
@@ -81,35 +81,44 @@ body {
 }
 
 .calendar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  margin: 20px 0;
 }
-.enter-dates {
-  width: 1000px;
+
+.month {
+  display: grid;
+  grid-template-columns: repeat(7, $tile-width);
+  grid-template-rows: 60px 20px 1fr;
+  grid-gap: 5px;
 }
 
 .month--name {
+  grid-column: 5 / 8;
+  grid-row: 1;
   font-size: 50px;
   font-weight: bold;
   text-align: right;
 }
 
 .month--header {
+  grid-column: 1 / 8;
+  grid-row: 2;
   display: flex;
-  justify-content: space-between;
-  margin: 5px 0;
+  justify-content: space-around;
 
   .month--header-day {
     font-weight: bold;
-    width: $tile-width;
+    width: 100%;
     text-align: center;
   }
 }
 
 .month--grid {
+  grid-column: 1 / 8;
+  grid-row: 3;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, $tile-width);
   grid-gap: 5px;
 }
 
@@ -117,7 +126,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: $tile-width;
   height: $tile-width;
   border-radius: 3px;
   transition: 0.15s linear all;
