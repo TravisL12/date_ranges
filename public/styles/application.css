@@ -713,8 +713,17 @@ body {
 
 .calendar {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 250px 1fr;
   margin: 20px 0;
+}
+
+.calendar--date-input {
+  padding: 0 10px;
+}
+
+.calendar--date-input-field label {
+  width: 80px;
+  display: inline-block;
 }
 
 .month {
