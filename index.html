@@ -8,20 +8,23 @@
     <div class="calendar">
       <div class="calendar--date-input">
         <h2>Enter a date range!</h2>
-        <div class="calendar--date-input-field">
-          <label>Start Date</label>
-          <input type="date" id="start" />
-        </div>
-        <div class="calendar--date-input-field">
-          <label>End Date</label>
-          <input type="date" id="end" />
-        </div>
+        <form id="dates-form">
+          <div class="calendar--date-input-field">
+            <label>Start Date</label>
+            <input type="date" id="start" />
+          </div>
+          <div class="calendar--date-input-field">
+            <label>End Date</label>
+            <input type="date" id="end" />
+          </div>
 
-        <div class="calendar--date-input-field">
-          <input type="button" id="submit-dates" value="Show Dates" />
-        </div>
+          <div class="calendar--date-input-field">
+            <input type="submit" value="Show Dates" />
+          </div>
+        </form>
 
         <div id="date-count"></div>
+        <div id="date-list"></div>
       </div>
       <div class="calendar--view" id="json-dates"></div>
     </div>

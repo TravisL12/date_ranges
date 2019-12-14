@@ -65,7 +65,9 @@ function buildMonth(dates) {
   }
 
   return `
-    <div class="month ${firstDay.monthName.toLowerCase()}">
+    <div class="month ${firstDay.monthName.toLowerCase()}" id="${firstDay.monthName.toLowerCase()}-${
+    firstDay.year
+  }">
         <div class="month--name">${firstDay.monthName} ${firstDay.year}</div>
         <div class="month--header">${WEEK_DAY_ELEMENTS}</div>
         <div class="month--grid">${buildMonthGrid(dates)}</div>
@@ -73,8 +75,8 @@ function buildMonth(dates) {
 }
 
 function getDateRange() {
-  const start = new Date(startDateEl.value.split("-"));
-  const end = new Date(endDateEl.value.split("-"));
+  const start = new Date(startEl.value.split("-"));
+  const end = new Date(endEl.value.split("-"));
   let countDays = 0;
 
   const daysOfYear = {};
@@ -93,25 +95,44 @@ function getDateRange() {
     countDays++;
   }
 
-  countEl.textContent = `Day Count: ${countDays}`;
-  calendarEl.innerHTML = Object.keys(daysOfYear).reduce((output, year) => {
+  const output = {
+    grid: "",
+    list: ""
+  };
+
+  Object.keys(daysOfYear).reduce((el, year) => {
     for (let j in daysOfYear[year]) {
       let month = daysOfYear[year][j];
-      output += buildMonth(month);
+      el.grid += buildMonth(month);
+      const monthName = MONTH_NAMES[j];
+      el.list += `<div class='${monthName.toLowerCase()} list'>
+        <a href='#${monthName.toLowerCase()}-${year}'>${monthName} ${year}</a>
+      </div>`;
     }
-    return output;
-  }, "");
+    return el;
+  }, output);
+
+  countEl.textContent = `Day Count: ${countDays}`;
+  dateListEl.innerHTML = output.list;
+  calendarEl.innerHTML = output.grid;
 }
 
-const startDateEl = document.getElementById("start");
-const endDateEl = document.getElementById("end");
-const dateSubmit = document.getElementById("submit-dates");
+const dateSubmit = document.getElementById("dates-form");
+const { start: startEl, end: endEl } = dateSubmit;
+
 const countEl = document.getElementById("date-count");
+const dateListEl = document.getElementById("date-list");
 const calendarEl = document.getElementById("json-dates");
+
 const defaultEnd = new Date();
 const defaultStart = new Date(defaultEnd.getFullYear(), 0);
 
-startDateEl.value = dateString(dateTile(defaultStart));
-endDateEl.value = dateString(dateTile(defaultEnd));
-dateSubmit.addEventListener("click", getDateRange);
+startEl.value = dateString(dateTile(defaultStart));
+endEl.value = dateString(dateTile(defaultEnd));
+
+dateSubmit.addEventListener("submit", e => {
+  e.preventDefault();
+  getDateRange();
+});
+
 getDateRange();

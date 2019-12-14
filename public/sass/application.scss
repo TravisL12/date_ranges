@@ -17,6 +17,11 @@ $november: cyan;
 $december: coral;
 
 @mixin loop-colors($color) {
+  &.list {
+    background: $color;
+    color: white;
+  }
+
   .month--name,
   .month--header {
     color: $color;
@@ -90,6 +95,7 @@ body {
 .calendar--date-input {
   padding: 0 10px;
   background: lightgray;
+  overflow-y: scroll;
 }
 
 .calendar--date-input-field {
@@ -105,12 +111,26 @@ body {
     border: none;
   }
 
-  input[type="button"] {
+  input[type="submit"] {
     background: lightgreen;
     border: none;
     border-radius: 0;
     padding: 5px 0;
   }
+}
+
+.list {
+  padding: 2px 5px;
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.list + .list {
+  margin-top: 5px;
 }
 
 .calendar--view {
@@ -125,6 +145,7 @@ body {
   grid-template-columns: repeat(7, $tile-width);
   grid-template-rows: 60px 20px 1fr;
   grid-gap: $grid-gap;
+  margin-bottom: 20px;
 }
 
 .month--name {
