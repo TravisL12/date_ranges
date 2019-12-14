@@ -10,13 +10,17 @@
         <h2>Enter a date range!</h2>
         <div class="calendar--date-input-field">
           <label>Start Date</label>
-          <input type="text" id="start" />
+          <input type="date" id="start" />
         </div>
         <div class="calendar--date-input-field">
           <label>End Date</label>
-          <input type="text" id="end" />
+          <input type="date" id="end" />
         </div>
-        <button id="submit-dates">Get Range</button>
+
+        <div class="calendar--date-input-field">
+          <input type="button" id="submit-dates" value="Show Dates" />
+        </div>
+
         <div id="date-count"></div>
       </div>
       <div class="calendar--view" id="json-dates"></div>

@@ -29,8 +29,12 @@ const WEEK_DAY_ELEMENTS = DAY_NAMES.map(
   day => `<div class="month--header-day">${day}</div>`
 ).join("");
 
+function zeroPad(num) {
+  return `0${num}`.slice(-2);
+}
+
 function dateString({ month, day, year }) {
-  return [month + 1, day, year].join("/");
+  return [year, zeroPad(month + 1), zeroPad(day)].join("-");
 }
 
 function dateTile(date) {
@@ -69,8 +73,8 @@ function buildMonth(dates) {
 }
 
 function getDateRange() {
-  const start = new Date(startDateEl.value);
-  const end = new Date(endDateEl.value);
+  const start = new Date(startDateEl.value.split("-"));
+  const end = new Date(endDateEl.value.split("-"));
   let countDays = 0;
 
   const daysOfYear = {};
@@ -105,10 +109,7 @@ const dateSubmit = document.getElementById("submit-dates");
 const countEl = document.getElementById("date-count");
 const calendarEl = document.getElementById("json-dates");
 const defaultEnd = new Date();
-const defaultStart = new Date(
-  defaultEnd.getFullYear() - 1,
-  defaultEnd.getMonth()
-);
+const defaultStart = new Date(defaultEnd.getFullYear(), 0);
 
 startDateEl.value = dateString(dateTile(defaultStart));
 endDateEl.value = dateString(dateTile(defaultEnd));

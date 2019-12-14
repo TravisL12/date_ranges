@@ -1,4 +1,5 @@
 $tile-width: 150px;
+$grid-gap: 5px;
 $light-gray: #fbfbfb;
 
 // Colors for tiles of months
@@ -82,26 +83,48 @@ body {
 
 .calendar {
   display: grid;
-  grid-template-columns: 250px 1fr;
-  margin: 20px 0;
+  grid-template-columns: 300px minmax(($tile-width + $grid-gap) * 7, 1fr);
+  grid-template-rows: 100vh;
 }
 
 .calendar--date-input {
   padding: 0 10px;
+  background: lightgray;
 }
 
 .calendar--date-input-field {
+  display: flex;
+  margin-bottom: 10px;
   label {
     width: 80px;
-    display: inline-block;
   }
+  input {
+    flex: 1;
+  }
+  input[type="date"] {
+    border: none;
+  }
+
+  input[type="button"] {
+    background: lightgreen;
+    border: none;
+    border-radius: 0;
+    padding: 5px 0;
+  }
+}
+
+.calendar--view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
 }
 
 .month {
   display: grid;
   grid-template-columns: repeat(7, $tile-width);
   grid-template-rows: 60px 20px 1fr;
-  grid-gap: 5px;
+  grid-gap: $grid-gap;
 }
 
 .month--name {
@@ -130,7 +153,7 @@ body {
   grid-row: 3;
   display: grid;
   grid-template-columns: repeat(7, $tile-width);
-  grid-gap: 5px;
+  grid-gap: $grid-gap;
 }
 
 .week--tile {
