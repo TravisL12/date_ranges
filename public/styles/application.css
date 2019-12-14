@@ -15,6 +15,9 @@
 .january .week--tile:nth-child(n+1):nth-child(-n+7).none, .january .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.january .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: #bfd8d9;
+}
 .january .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #568e90;
 }
@@ -23,6 +26,9 @@
 }
 .january .week--tile:nth-child(n+8):nth-child(-n+14).none, .january .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.january .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: #bfd8d9;
 }
 .january .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #4c7e80;
@@ -33,6 +39,9 @@
 .january .week--tile:nth-child(n+15):nth-child(-n+21).none, .january .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.january .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: #bfd8d9;
+}
 .january .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #436f70;
 }
@@ -41,6 +50,9 @@
 }
 .january .week--tile:nth-child(n+22):nth-child(-n+28).none, .january .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.january .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: #bfd8d9;
 }
 .january .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #395f60;
@@ -51,6 +63,9 @@
 .january .week--tile:nth-child(n+29):nth-child(-n+35).none, .january .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.january .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: #bfd8d9;
+}
 .january .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: #304f50;
 }
@@ -59,6 +74,9 @@
 }
 .january .week--tile:nth-child(n+36):nth-child(-n+42).none, .january .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.january .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: #bfd8d9;
 }
 
 .february.list {
@@ -78,6 +96,9 @@
 .february .week--tile:nth-child(n+1):nth-child(-n+7).none, .february .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.february .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: white;
+}
 .february .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #99cfe0;
 }
@@ -86,6 +107,9 @@
 }
 .february .week--tile:nth-child(n+8):nth-child(-n+14).none, .february .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.february .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: white;
 }
 .february .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #86c5da;
@@ -96,6 +120,9 @@
 .february .week--tile:nth-child(n+15):nth-child(-n+21).none, .february .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.february .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: white;
+}
 .february .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #72bcd4;
 }
@@ -104,6 +131,9 @@
 }
 .february .week--tile:nth-child(n+22):nth-child(-n+28).none, .february .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.february .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: white;
 }
 .february .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #5fb3ce;
@@ -114,6 +144,9 @@
 .february .week--tile:nth-child(n+29):nth-child(-n+35).none, .february .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.february .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: white;
+}
 .february .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: #4baac8;
 }
@@ -122,6 +155,9 @@
 }
 .february .week--tile:nth-child(n+36):nth-child(-n+42).none, .february .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.february .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: white;
 }
 
 .march.list {
@@ -141,6 +177,9 @@
 .march .week--tile:nth-child(n+1):nth-child(-n+7).none, .march .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.march .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: #99ff99;
+}
 .march .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #00e600;
 }
@@ -149,6 +188,9 @@
 }
 .march .week--tile:nth-child(n+8):nth-child(-n+14).none, .march .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.march .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: #99ff99;
 }
 .march .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #00cc00;
@@ -159,6 +201,9 @@
 .march .week--tile:nth-child(n+15):nth-child(-n+21).none, .march .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.march .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: #99ff99;
+}
 .march .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #00b300;
 }
@@ -167,6 +212,9 @@
 }
 .march .week--tile:nth-child(n+22):nth-child(-n+28).none, .march .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.march .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: #99ff99;
 }
 .march .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #009900;
@@ -177,6 +225,9 @@
 .march .week--tile:nth-child(n+29):nth-child(-n+35).none, .march .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.march .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: #99ff99;
+}
 .march .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: green;
 }
@@ -185,6 +236,9 @@
 }
 .march .week--tile:nth-child(n+36):nth-child(-n+42).none, .march .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.march .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: #99ff99;
 }
 
 .april.list {
@@ -204,6 +258,9 @@
 .april .week--tile:nth-child(n+1):nth-child(-n+7).none, .april .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.april .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: #ff99ff;
+}
 .april .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #e600e6;
 }
@@ -212,6 +269,9 @@
 }
 .april .week--tile:nth-child(n+8):nth-child(-n+14).none, .april .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.april .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: #ff99ff;
 }
 .april .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #cc00cc;
@@ -222,6 +282,9 @@
 .april .week--tile:nth-child(n+15):nth-child(-n+21).none, .april .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.april .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: #ff99ff;
+}
 .april .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #b300b3;
 }
@@ -230,6 +293,9 @@
 }
 .april .week--tile:nth-child(n+22):nth-child(-n+28).none, .april .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.april .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: #ff99ff;
 }
 .april .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #990099;
@@ -240,6 +306,9 @@
 .april .week--tile:nth-child(n+29):nth-child(-n+35).none, .april .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.april .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: #ff99ff;
+}
 .april .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: purple;
 }
@@ -248,6 +317,9 @@
 }
 .april .week--tile:nth-child(n+36):nth-child(-n+42).none, .april .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.april .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: #ff99ff;
 }
 
 .may.list {
@@ -267,6 +339,9 @@
 .may .week--tile:nth-child(n+1):nth-child(-n+7).none, .may .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.may .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: #9999ff;
+}
 .may .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #0000e6;
 }
@@ -275,6 +350,9 @@
 }
 .may .week--tile:nth-child(n+8):nth-child(-n+14).none, .may .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.may .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: #9999ff;
 }
 .may .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #0000cc;
@@ -285,6 +363,9 @@
 .may .week--tile:nth-child(n+15):nth-child(-n+21).none, .may .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.may .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: #9999ff;
+}
 .may .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #0000b3;
 }
@@ -293,6 +374,9 @@
 }
 .may .week--tile:nth-child(n+22):nth-child(-n+28).none, .may .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.may .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: #9999ff;
 }
 .may .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #000099;
@@ -303,6 +387,9 @@
 .may .week--tile:nth-child(n+29):nth-child(-n+35).none, .may .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.may .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: #9999ff;
+}
 .may .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: navy;
 }
@@ -311,6 +398,9 @@
 }
 .may .week--tile:nth-child(n+36):nth-child(-n+42).none, .may .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.may .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: #9999ff;
 }
 
 .june.list {
@@ -330,6 +420,9 @@
 .june .week--tile:nth-child(n+1):nth-child(-n+7).none, .june .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.june .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: #ff1aff;
+}
 .june .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #670067;
 }
@@ -338,6 +431,9 @@
 }
 .june .week--tile:nth-child(n+8):nth-child(-n+14).none, .june .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.june .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: #ff1aff;
 }
 .june .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #4d004d;
@@ -348,6 +444,9 @@
 .june .week--tile:nth-child(n+15):nth-child(-n+21).none, .june .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.june .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: #ff1aff;
+}
 .june .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #340034;
 }
@@ -356,6 +455,9 @@
 }
 .june .week--tile:nth-child(n+22):nth-child(-n+28).none, .june .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.june .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: #ff1aff;
 }
 .june .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #1a001a;
@@ -366,6 +468,9 @@
 .june .week--tile:nth-child(n+29):nth-child(-n+35).none, .june .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.june .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: #ff1aff;
+}
 .june .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: #010001;
 }
@@ -374,6 +479,9 @@
 }
 .june .week--tile:nth-child(n+36):nth-child(-n+42).none, .june .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.june .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: #ff1aff;
 }
 
 .july.list {
@@ -393,6 +501,9 @@
 .july .week--tile:nth-child(n+1):nth-child(-n+7).none, .july .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.july .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: white;
+}
 .july .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #d9ac73;
 }
@@ -401,6 +512,9 @@
 }
 .july .week--tile:nth-child(n+8):nth-child(-n+14).none, .july .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.july .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: white;
 }
 .july .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #d3a05f;
@@ -411,6 +525,9 @@
 .july .week--tile:nth-child(n+15):nth-child(-n+21).none, .july .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.july .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: white;
+}
 .july .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #ce954b;
 }
@@ -419,6 +536,9 @@
 }
 .july .week--tile:nth-child(n+22):nth-child(-n+28).none, .july .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.july .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: white;
 }
 .july .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #c88937;
@@ -429,6 +549,9 @@
 .july .week--tile:nth-child(n+29):nth-child(-n+35).none, .july .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.july .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: white;
+}
 .july .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: #b47b32;
 }
@@ -437,6 +560,9 @@
 }
 .july .week--tile:nth-child(n+36):nth-child(-n+42).none, .july .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.july .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: white;
 }
 
 .august.list {
@@ -456,6 +582,9 @@
 .august .week--tile:nth-child(n+1):nth-child(-n+7).none, .august .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.august .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: white;
+}
 .august .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #ffa7b6;
 }
@@ -464,6 +593,9 @@
 }
 .august .week--tile:nth-child(n+8):nth-child(-n+14).none, .august .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.august .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: white;
 }
 .august .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #ff8da1;
@@ -474,6 +606,9 @@
 .august .week--tile:nth-child(n+15):nth-child(-n+21).none, .august .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.august .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: white;
+}
 .august .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #ff748c;
 }
@@ -482,6 +617,9 @@
 }
 .august .week--tile:nth-child(n+22):nth-child(-n+28).none, .august .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.august .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: white;
 }
 .august .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #ff5a77;
@@ -492,6 +630,9 @@
 .august .week--tile:nth-child(n+29):nth-child(-n+35).none, .august .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.august .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: white;
+}
 .august .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: #ff4162;
 }
@@ -500,6 +641,9 @@
 }
 .august .week--tile:nth-child(n+36):nth-child(-n+42).none, .august .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.august .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: white;
 }
 
 .september.list {
@@ -519,6 +663,9 @@
 .september .week--tile:nth-child(n+1):nth-child(-n+7).none, .september .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.september .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: white;
+}
 .september .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #f2d49c;
 }
@@ -527,6 +674,9 @@
 }
 .september .week--tile:nth-child(n+8):nth-child(-n+14).none, .september .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.september .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: white;
 }
 .september .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #efca86;
@@ -537,6 +687,9 @@
 .september .week--tile:nth-child(n+15):nth-child(-n+21).none, .september .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.september .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: white;
+}
 .september .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #ecc16f;
 }
@@ -545,6 +698,9 @@
 }
 .september .week--tile:nth-child(n+22):nth-child(-n+28).none, .september .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.september .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: white;
 }
 .september .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #e9b759;
@@ -555,6 +711,9 @@
 .september .week--tile:nth-child(n+29):nth-child(-n+35).none, .september .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.september .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: white;
+}
 .september .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: #e6ad42;
 }
@@ -563,6 +722,9 @@
 }
 .september .week--tile:nth-child(n+36):nth-child(-n+42).none, .september .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.september .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: white;
 }
 
 .october.list {
@@ -582,6 +744,9 @@
 .october .week--tile:nth-child(n+1):nth-child(-n+7).none, .october .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.october .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: #1aff1a;
+}
 .october .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #006700;
 }
@@ -590,6 +755,9 @@
 }
 .october .week--tile:nth-child(n+8):nth-child(-n+14).none, .october .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.october .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: #1aff1a;
 }
 .october .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #004d00;
@@ -600,6 +768,9 @@
 .october .week--tile:nth-child(n+15):nth-child(-n+21).none, .october .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.october .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: #1aff1a;
+}
 .october .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #003400;
 }
@@ -608,6 +779,9 @@
 }
 .october .week--tile:nth-child(n+22):nth-child(-n+28).none, .october .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.october .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: #1aff1a;
 }
 .october .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #001a00;
@@ -618,6 +792,9 @@
 .october .week--tile:nth-child(n+29):nth-child(-n+35).none, .october .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.october .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: #1aff1a;
+}
 .october .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: #000100;
 }
@@ -626,6 +803,9 @@
 }
 .october .week--tile:nth-child(n+36):nth-child(-n+42).none, .october .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.october .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: #1aff1a;
 }
 
 .november.list {
@@ -645,6 +825,9 @@
 .november .week--tile:nth-child(n+1):nth-child(-n+7).none, .november .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.november .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: #99ffff;
+}
 .november .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #00e6e6;
 }
@@ -653,6 +836,9 @@
 }
 .november .week--tile:nth-child(n+8):nth-child(-n+14).none, .november .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.november .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: #99ffff;
 }
 .november .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #00cccc;
@@ -663,6 +849,9 @@
 .november .week--tile:nth-child(n+15):nth-child(-n+21).none, .november .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.november .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: #99ffff;
+}
 .november .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #00b3b3;
 }
@@ -671,6 +860,9 @@
 }
 .november .week--tile:nth-child(n+22):nth-child(-n+28).none, .november .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.november .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: #99ffff;
 }
 .november .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #009999;
@@ -681,6 +873,9 @@
 .november .week--tile:nth-child(n+29):nth-child(-n+35).none, .november .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.november .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: #99ffff;
+}
 .november .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: teal;
 }
@@ -689,6 +884,9 @@
 }
 .november .week--tile:nth-child(n+36):nth-child(-n+42).none, .november .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.november .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: #99ffff;
 }
 
 .december.list {
@@ -708,6 +906,9 @@
 .december .week--tile:nth-child(n+1):nth-child(-n+7).none, .december .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
   background: transparent;
 }
+.december .week--tile:nth-child(n+1):nth-child(-n+7).fade {
+  background: #ffefe9;
+}
 .december .week--tile:nth-child(n+8):nth-child(-n+14) {
   background: #ff6c37;
 }
@@ -716,6 +917,9 @@
 }
 .december .week--tile:nth-child(n+8):nth-child(-n+14).none, .december .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
   background: transparent;
+}
+.december .week--tile:nth-child(n+8):nth-child(-n+14).fade {
+  background: #ffefe9;
 }
 .december .week--tile:nth-child(n+15):nth-child(-n+21) {
   background: #ff5a1d;
@@ -726,6 +930,9 @@
 .december .week--tile:nth-child(n+15):nth-child(-n+21).none, .december .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
   background: transparent;
 }
+.december .week--tile:nth-child(n+15):nth-child(-n+21).fade {
+  background: #ffefe9;
+}
 .december .week--tile:nth-child(n+22):nth-child(-n+28) {
   background: #ff4704;
 }
@@ -734,6 +941,9 @@
 }
 .december .week--tile:nth-child(n+22):nth-child(-n+28).none, .december .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
   background: transparent;
+}
+.december .week--tile:nth-child(n+22):nth-child(-n+28).fade {
+  background: #ffefe9;
 }
 .december .week--tile:nth-child(n+29):nth-child(-n+35) {
   background: #e93f00;
@@ -744,6 +954,9 @@
 .december .week--tile:nth-child(n+29):nth-child(-n+35).none, .december .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
   background: transparent;
 }
+.december .week--tile:nth-child(n+29):nth-child(-n+35).fade {
+  background: #ffefe9;
+}
 .december .week--tile:nth-child(n+36):nth-child(-n+42) {
   background: #d03800;
 }
@@ -752,6 +965,9 @@
 }
 .december .week--tile:nth-child(n+36):nth-child(-n+42).none, .december .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
   background: transparent;
+}
+.december .week--tile:nth-child(n+36):nth-child(-n+42).fade {
+  background: #ffefe9;
 }
 
 body {

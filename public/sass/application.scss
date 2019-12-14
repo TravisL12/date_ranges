@@ -31,7 +31,6 @@ $december: coral;
     $start: $weekI + 1;
     $end: $weekI + 7;
     $background: darken($color, $i * 5);
-
     .week--tile:nth-child(n + #{$start}):nth-child(-n + #{$end}) {
       background: $background;
       &:hover {
@@ -40,6 +39,9 @@ $december: coral;
       &.none,
       &.none:hover {
         background: transparent;
+      }
+      &.fade {
+        background: lighten($color, 30%);
       }
     }
   }
