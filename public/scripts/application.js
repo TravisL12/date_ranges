@@ -57,9 +57,9 @@ class Month {
   render = (startDate, endDate) => {
     let days = [];
     for (let i = 1; i <= this.dayCount; i++) {
-      const isOutofRange = i < startDate || i > endDate;
+      const isOutOfRange = i < startDate || i > endDate;
       days.push(
-        `<div class="week--tile${isOutofRange ? " fade" : ""}">${i}</div>`
+        `<div class="week--tile${isOutOfRange ? " fade" : ""}">${i}</div>`
       );
     }
     if (this.dow > 0) {
@@ -127,7 +127,7 @@ class Calendar {
     const { start, end } = this.getDateValues();
     const months = [];
     for (let year = start.getFullYear(); year <= end.getFullYear(); year++) {
-      for (let month = 0; month < 12; month++) {
+      for (let month = start.getMonth(); month <= end.getMonth(); month++) {
         if (year >= end.getFullYear() && month > end.getMonth()) {
           break;
         }
