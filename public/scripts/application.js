@@ -80,80 +80,93 @@ class Month {
   };
 }
 
-const dateSubmit = document.getElementById("dates-form");
-const { start: startEl, end: endEl } = dateSubmit;
+class Calendar {
+  constructor() {
+    const dateSubmit = document.getElementById("dates-form");
+    const { start, end } = dateSubmit;
 
-const countEl = document.getElementById("date-count");
-const dateListEl = document.getElementById("date-list");
-const calendarEl = document.getElementById("json-dates");
+    this.startEl = start;
+    this.endEl = end;
+    this.countEl = document.getElementById("date-count");
+    this.dateListEl = document.getElementById("date-list");
+    this.calendarEl = document.getElementById("json-dates");
 
-const defaultEnd = new Date();
-const defaultStart = new Date(defaultEnd.getFullYear(), 0);
+    const defaultEnd = new Date();
+    const defaultStart = new Date(defaultEnd.getFullYear(), 0);
 
-startEl.value = formatDate(defaultStart);
-endEl.value = formatDate(defaultEnd);
+    this.startEl.value = formatDate(defaultStart);
+    this.endEl.value = formatDate(defaultEnd);
 
-dateSubmit.addEventListener("submit", e => {
-  e.preventDefault();
-  getDateRange();
-});
-
-getDateRange();
-
-function dayRange(start, end, month) {
-  const range = { start: 1, end: month.dayCount };
-  if (month.year === start.getFullYear() && month.month === start.getMonth()) {
-    range.start = start.getDate();
-  }
-  if (month.year === end.getFullYear() && month.month === end.getMonth()) {
-    range.end = end.getDate();
-  }
-  return range;
-}
-
-function getDateRange() {
-  const start = new Date(startEl.value.split("-"));
-  const end = new Date(endEl.value.split("-"));
-
-  const months = [];
-  for (let year = start.getFullYear(); year <= end.getFullYear(); year++) {
-    for (let month = 0; month < 12; month++) {
-      if (year >= end.getFullYear() && month > end.getMonth()) {
-        break;
-      }
-      const tile = new Month(month, year);
-      months.push(tile);
-    }
+    dateSubmit.addEventListener("submit", e => {
+      e.preventDefault();
+      this.getDateRange();
+    });
   }
 
-  renderCalendar(months);
-}
-
-function renderCalendar(months) {
-  const start = new Date(startEl.value.split("-"));
-  const end = new Date(endEl.value.split("-"));
-  let countDays = 0;
-  const output = {
-    grid: "",
-    list: ""
+  getDateValues = () => {
+    const start = new Date(this.startEl.value.split("-"));
+    const end = new Date(this.endEl.value.split("-"));
+    return { start, end };
   };
 
-  let finishDay = 0;
-  months.reduce((el, month) => {
-    const { start: startDay, end: endDay } = dayRange(start, end, month);
-    el.grid += month.render(startDay, endDay);
-    const { year, monthName } = month;
-    el.list += `<div class='${monthName.toLowerCase()} list'>
+  dayRange = (start, end, month) => {
+    const range = { start: 1, end: month.dayCount };
+    if (
+      month.year === start.getFullYear() &&
+      month.month === start.getMonth()
+    ) {
+      range.start = start.getDate();
+    }
+    if (month.year === end.getFullYear() && month.month === end.getMonth()) {
+      range.end = end.getDate();
+    }
+    return range;
+  };
+
+  getDateRange = () => {
+    const { start, end } = this.getDateValues();
+    const months = [];
+    for (let year = start.getFullYear(); year <= end.getFullYear(); year++) {
+      for (let month = 0; month < 12; month++) {
+        if (year >= end.getFullYear() && month > end.getMonth()) {
+          break;
+        }
+        const tile = new Month(month, year);
+        months.push(tile);
+      }
+    }
+
+    this.renderCalendar(months);
+  };
+
+  renderCalendar = months => {
+    const { start, end } = this.getDateValues();
+    let countDays = 0;
+    const output = {
+      grid: "",
+      list: ""
+    };
+
+    let finishDay = 0;
+    months.reduce((el, month) => {
+      const { start: startDay, end: endDay } = this.dayRange(start, end, month);
+      el.grid += month.render(startDay, endDay);
+      const { year, monthName } = month;
+      el.list += `<div class='${monthName.toLowerCase()} list'>
     <a href='#${monthName.toLowerCase()}-${year}'>${monthName} ${year}</a>
     </div>`;
 
-    countDays += month.dayCount;
-    finishDay = month.dayCount - endDay;
-    return el;
-  }, output);
+      countDays += month.dayCount;
+      finishDay = month.dayCount - endDay;
+      return el;
+    }, output);
 
-  countEl.textContent = `Day Count: ${countDays -
-    (start.getDate() - 1 + finishDay)}`;
-  dateListEl.innerHTML = output.list;
-  calendarEl.innerHTML = output.grid;
+    this.countEl.textContent = `Day Count: ${countDays -
+      (start.getDate() - 1 + finishDay)}`;
+    this.dateListEl.innerHTML = output.list;
+    this.calendarEl.innerHTML = output.grid;
+  };
 }
+
+const calendar = new Calendar();
+calendar.getDateRange();
