@@ -72,7 +72,7 @@ class Month {
     return `
     <div class="month ${this.monthName.toLowerCase()}" id="${this.monthName.toLowerCase()}-${
       this.year
-    }">
+      }">
     <div class="month--name">${this.monthName} ${this.year}</div>
     <div class="month--header">${WEEK_DAY_ELEMENTS}</div>
     <div class="month--grid">${days.join("")}</div>
@@ -126,9 +126,17 @@ class Calendar {
   getDateRange = () => {
     const { start, end } = this.getDateValues();
     const months = [];
-    for (let year = start.getFullYear(); year <= end.getFullYear(); year++) {
-      for (let month = start.getMonth(); month <= end.getMonth(); month++) {
-        if (year >= end.getFullYear() && month > end.getMonth()) {
+    const startYear = start.getFullYear();
+    const startMonth = start.getMonth();
+    const endYear = end.getFullYear();
+    const endMonth = end.getMonth();
+
+    for (let year = startYear; year <= endYear; year++) {
+      const monthStart = year === startYear ? startMonth : 0;
+      const monthEnd = year === endYear ? endMonth : 11;
+
+      for (let month = monthStart; month <= monthEnd; month++) {
+        if (year >= endYear && month > endMonth) {
           break;
         }
         const tile = new Month(month, year);
