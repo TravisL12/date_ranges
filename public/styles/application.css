@@ -1,975 +1,3 @@
-.january.list {
-  background: cadetblue;
-  color: white;
-}
-.january .month--name,
-.january .month--header {
-  color: cadetblue;
-}
-.january .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: cadetblue;
-}
-.january .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: cadetblue;
-}
-.january .week--tile:nth-child(n+1):nth-child(-n+7).none, .january .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.january .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: #bfd8d9;
-}
-.january .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #568e90;
-}
-.january .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: cadetblue;
-}
-.january .week--tile:nth-child(n+8):nth-child(-n+14).none, .january .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.january .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: #bfd8d9;
-}
-.january .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #4c7e80;
-}
-.january .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: cadetblue;
-}
-.january .week--tile:nth-child(n+15):nth-child(-n+21).none, .january .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.january .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: #bfd8d9;
-}
-.january .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #436f70;
-}
-.january .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: cadetblue;
-}
-.january .week--tile:nth-child(n+22):nth-child(-n+28).none, .january .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.january .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: #bfd8d9;
-}
-.january .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #395f60;
-}
-.january .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: cadetblue;
-}
-.january .week--tile:nth-child(n+29):nth-child(-n+35).none, .january .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.january .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: #bfd8d9;
-}
-.january .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: #304f50;
-}
-.january .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: cadetblue;
-}
-.january .week--tile:nth-child(n+36):nth-child(-n+42).none, .january .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.january .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: #bfd8d9;
-}
-
-.february.list {
-  background: lightblue;
-  color: white;
-}
-.february .month--name,
-.february .month--header {
-  color: lightblue;
-}
-.february .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: lightblue;
-}
-.february .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: lightblue;
-}
-.february .week--tile:nth-child(n+1):nth-child(-n+7).none, .february .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.february .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: white;
-}
-.february .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #99cfe0;
-}
-.february .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: lightblue;
-}
-.february .week--tile:nth-child(n+8):nth-child(-n+14).none, .february .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.february .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: white;
-}
-.february .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #86c5da;
-}
-.february .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: lightblue;
-}
-.february .week--tile:nth-child(n+15):nth-child(-n+21).none, .february .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.february .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: white;
-}
-.february .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #72bcd4;
-}
-.february .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: lightblue;
-}
-.february .week--tile:nth-child(n+22):nth-child(-n+28).none, .february .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.february .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: white;
-}
-.february .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #5fb3ce;
-}
-.february .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: lightblue;
-}
-.february .week--tile:nth-child(n+29):nth-child(-n+35).none, .february .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.february .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: white;
-}
-.february .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: #4baac8;
-}
-.february .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: lightblue;
-}
-.february .week--tile:nth-child(n+36):nth-child(-n+42).none, .february .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.february .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: white;
-}
-
-.march.list {
-  background: lime;
-  color: white;
-}
-.march .month--name,
-.march .month--header {
-  color: lime;
-}
-.march .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: lime;
-}
-.march .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: lime;
-}
-.march .week--tile:nth-child(n+1):nth-child(-n+7).none, .march .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.march .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: #99ff99;
-}
-.march .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #00e600;
-}
-.march .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: lime;
-}
-.march .week--tile:nth-child(n+8):nth-child(-n+14).none, .march .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.march .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: #99ff99;
-}
-.march .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #00cc00;
-}
-.march .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: lime;
-}
-.march .week--tile:nth-child(n+15):nth-child(-n+21).none, .march .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.march .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: #99ff99;
-}
-.march .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #00b300;
-}
-.march .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: lime;
-}
-.march .week--tile:nth-child(n+22):nth-child(-n+28).none, .march .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.march .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: #99ff99;
-}
-.march .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #009900;
-}
-.march .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: lime;
-}
-.march .week--tile:nth-child(n+29):nth-child(-n+35).none, .march .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.march .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: #99ff99;
-}
-.march .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: green;
-}
-.march .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: lime;
-}
-.march .week--tile:nth-child(n+36):nth-child(-n+42).none, .march .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.march .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: #99ff99;
-}
-
-.april.list {
-  background: magenta;
-  color: white;
-}
-.april .month--name,
-.april .month--header {
-  color: magenta;
-}
-.april .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: fuchsia;
-}
-.april .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: magenta;
-}
-.april .week--tile:nth-child(n+1):nth-child(-n+7).none, .april .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.april .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: #ff99ff;
-}
-.april .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #e600e6;
-}
-.april .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: magenta;
-}
-.april .week--tile:nth-child(n+8):nth-child(-n+14).none, .april .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.april .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: #ff99ff;
-}
-.april .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #cc00cc;
-}
-.april .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: magenta;
-}
-.april .week--tile:nth-child(n+15):nth-child(-n+21).none, .april .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.april .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: #ff99ff;
-}
-.april .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #b300b3;
-}
-.april .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: magenta;
-}
-.april .week--tile:nth-child(n+22):nth-child(-n+28).none, .april .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.april .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: #ff99ff;
-}
-.april .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #990099;
-}
-.april .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: magenta;
-}
-.april .week--tile:nth-child(n+29):nth-child(-n+35).none, .april .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.april .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: #ff99ff;
-}
-.april .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: purple;
-}
-.april .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: magenta;
-}
-.april .week--tile:nth-child(n+36):nth-child(-n+42).none, .april .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.april .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: #ff99ff;
-}
-
-.may.list {
-  background: blue;
-  color: white;
-}
-.may .month--name,
-.may .month--header {
-  color: blue;
-}
-.may .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: blue;
-}
-.may .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: blue;
-}
-.may .week--tile:nth-child(n+1):nth-child(-n+7).none, .may .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.may .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: #9999ff;
-}
-.may .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #0000e6;
-}
-.may .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: blue;
-}
-.may .week--tile:nth-child(n+8):nth-child(-n+14).none, .may .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.may .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: #9999ff;
-}
-.may .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #0000cc;
-}
-.may .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: blue;
-}
-.may .week--tile:nth-child(n+15):nth-child(-n+21).none, .may .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.may .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: #9999ff;
-}
-.may .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #0000b3;
-}
-.may .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: blue;
-}
-.may .week--tile:nth-child(n+22):nth-child(-n+28).none, .may .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.may .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: #9999ff;
-}
-.may .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #000099;
-}
-.may .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: blue;
-}
-.may .week--tile:nth-child(n+29):nth-child(-n+35).none, .may .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.may .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: #9999ff;
-}
-.may .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: navy;
-}
-.may .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: blue;
-}
-.may .week--tile:nth-child(n+36):nth-child(-n+42).none, .may .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.may .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: #9999ff;
-}
-
-.june.list {
-  background: purple;
-  color: white;
-}
-.june .month--name,
-.june .month--header {
-  color: purple;
-}
-.june .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: purple;
-}
-.june .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: purple;
-}
-.june .week--tile:nth-child(n+1):nth-child(-n+7).none, .june .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.june .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: #ff1aff;
-}
-.june .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #670067;
-}
-.june .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: purple;
-}
-.june .week--tile:nth-child(n+8):nth-child(-n+14).none, .june .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.june .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: #ff1aff;
-}
-.june .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #4d004d;
-}
-.june .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: purple;
-}
-.june .week--tile:nth-child(n+15):nth-child(-n+21).none, .june .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.june .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: #ff1aff;
-}
-.june .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #340034;
-}
-.june .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: purple;
-}
-.june .week--tile:nth-child(n+22):nth-child(-n+28).none, .june .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.june .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: #ff1aff;
-}
-.june .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #1a001a;
-}
-.june .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: purple;
-}
-.june .week--tile:nth-child(n+29):nth-child(-n+35).none, .june .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.june .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: #ff1aff;
-}
-.june .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: #010001;
-}
-.june .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: purple;
-}
-.june .week--tile:nth-child(n+36):nth-child(-n+42).none, .june .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.june .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: #ff1aff;
-}
-
-.july.list {
-  background: burlywood;
-  color: white;
-}
-.july .month--name,
-.july .month--header {
-  color: burlywood;
-}
-.july .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: burlywood;
-}
-.july .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: burlywood;
-}
-.july .week--tile:nth-child(n+1):nth-child(-n+7).none, .july .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.july .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: white;
-}
-.july .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #d9ac73;
-}
-.july .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: burlywood;
-}
-.july .week--tile:nth-child(n+8):nth-child(-n+14).none, .july .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.july .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: white;
-}
-.july .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #d3a05f;
-}
-.july .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: burlywood;
-}
-.july .week--tile:nth-child(n+15):nth-child(-n+21).none, .july .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.july .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: white;
-}
-.july .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #ce954b;
-}
-.july .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: burlywood;
-}
-.july .week--tile:nth-child(n+22):nth-child(-n+28).none, .july .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.july .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: white;
-}
-.july .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #c88937;
-}
-.july .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: burlywood;
-}
-.july .week--tile:nth-child(n+29):nth-child(-n+35).none, .july .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.july .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: white;
-}
-.july .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: #b47b32;
-}
-.july .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: burlywood;
-}
-.july .week--tile:nth-child(n+36):nth-child(-n+42).none, .july .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.july .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: white;
-}
-
-.august.list {
-  background: pink;
-  color: white;
-}
-.august .month--name,
-.august .month--header {
-  color: pink;
-}
-.august .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: pink;
-}
-.august .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: pink;
-}
-.august .week--tile:nth-child(n+1):nth-child(-n+7).none, .august .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.august .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: white;
-}
-.august .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #ffa7b6;
-}
-.august .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: pink;
-}
-.august .week--tile:nth-child(n+8):nth-child(-n+14).none, .august .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.august .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: white;
-}
-.august .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #ff8da1;
-}
-.august .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: pink;
-}
-.august .week--tile:nth-child(n+15):nth-child(-n+21).none, .august .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.august .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: white;
-}
-.august .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #ff748c;
-}
-.august .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: pink;
-}
-.august .week--tile:nth-child(n+22):nth-child(-n+28).none, .august .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.august .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: white;
-}
-.august .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #ff5a77;
-}
-.august .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: pink;
-}
-.august .week--tile:nth-child(n+29):nth-child(-n+35).none, .august .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.august .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: white;
-}
-.august .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: #ff4162;
-}
-.august .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: pink;
-}
-.august .week--tile:nth-child(n+36):nth-child(-n+42).none, .august .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.august .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: white;
-}
-
-.september.list {
-  background: wheat;
-  color: white;
-}
-.september .month--name,
-.september .month--header {
-  color: wheat;
-}
-.september .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: wheat;
-}
-.september .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: wheat;
-}
-.september .week--tile:nth-child(n+1):nth-child(-n+7).none, .september .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.september .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: white;
-}
-.september .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #f2d49c;
-}
-.september .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: wheat;
-}
-.september .week--tile:nth-child(n+8):nth-child(-n+14).none, .september .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.september .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: white;
-}
-.september .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #efca86;
-}
-.september .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: wheat;
-}
-.september .week--tile:nth-child(n+15):nth-child(-n+21).none, .september .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.september .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: white;
-}
-.september .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #ecc16f;
-}
-.september .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: wheat;
-}
-.september .week--tile:nth-child(n+22):nth-child(-n+28).none, .september .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.september .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: white;
-}
-.september .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #e9b759;
-}
-.september .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: wheat;
-}
-.september .week--tile:nth-child(n+29):nth-child(-n+35).none, .september .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.september .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: white;
-}
-.september .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: #e6ad42;
-}
-.september .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: wheat;
-}
-.september .week--tile:nth-child(n+36):nth-child(-n+42).none, .september .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.september .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: white;
-}
-
-.october.list {
-  background: green;
-  color: white;
-}
-.october .month--name,
-.october .month--header {
-  color: green;
-}
-.october .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: green;
-}
-.october .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: green;
-}
-.october .week--tile:nth-child(n+1):nth-child(-n+7).none, .october .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.october .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: #1aff1a;
-}
-.october .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #006700;
-}
-.october .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: green;
-}
-.october .week--tile:nth-child(n+8):nth-child(-n+14).none, .october .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.october .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: #1aff1a;
-}
-.october .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #004d00;
-}
-.october .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: green;
-}
-.october .week--tile:nth-child(n+15):nth-child(-n+21).none, .october .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.october .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: #1aff1a;
-}
-.october .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #003400;
-}
-.october .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: green;
-}
-.october .week--tile:nth-child(n+22):nth-child(-n+28).none, .october .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.october .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: #1aff1a;
-}
-.october .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #001a00;
-}
-.october .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: green;
-}
-.october .week--tile:nth-child(n+29):nth-child(-n+35).none, .october .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.october .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: #1aff1a;
-}
-.october .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: #000100;
-}
-.october .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: green;
-}
-.october .week--tile:nth-child(n+36):nth-child(-n+42).none, .october .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.october .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: #1aff1a;
-}
-
-.november.list {
-  background: cyan;
-  color: white;
-}
-.november .month--name,
-.november .month--header {
-  color: cyan;
-}
-.november .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: aqua;
-}
-.november .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: cyan;
-}
-.november .week--tile:nth-child(n+1):nth-child(-n+7).none, .november .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.november .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: #99ffff;
-}
-.november .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #00e6e6;
-}
-.november .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: cyan;
-}
-.november .week--tile:nth-child(n+8):nth-child(-n+14).none, .november .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.november .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: #99ffff;
-}
-.november .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #00cccc;
-}
-.november .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: cyan;
-}
-.november .week--tile:nth-child(n+15):nth-child(-n+21).none, .november .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.november .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: #99ffff;
-}
-.november .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #00b3b3;
-}
-.november .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: cyan;
-}
-.november .week--tile:nth-child(n+22):nth-child(-n+28).none, .november .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.november .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: #99ffff;
-}
-.november .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #009999;
-}
-.november .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: cyan;
-}
-.november .week--tile:nth-child(n+29):nth-child(-n+35).none, .november .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.november .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: #99ffff;
-}
-.november .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: teal;
-}
-.november .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: cyan;
-}
-.november .week--tile:nth-child(n+36):nth-child(-n+42).none, .november .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.november .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: #99ffff;
-}
-
-.december.list {
-  background: coral;
-  color: white;
-}
-.december .month--name,
-.december .month--header {
-  color: coral;
-}
-.december .week--tile:nth-child(n+1):nth-child(-n+7) {
-  background: coral;
-}
-.december .week--tile:nth-child(n+1):nth-child(-n+7):hover {
-  background: coral;
-}
-.december .week--tile:nth-child(n+1):nth-child(-n+7).none, .december .week--tile:nth-child(n+1):nth-child(-n+7).none:hover {
-  background: transparent;
-}
-.december .week--tile:nth-child(n+1):nth-child(-n+7).fade {
-  background: #ffefe9;
-}
-.december .week--tile:nth-child(n+8):nth-child(-n+14) {
-  background: #ff6c37;
-}
-.december .week--tile:nth-child(n+8):nth-child(-n+14):hover {
-  background: coral;
-}
-.december .week--tile:nth-child(n+8):nth-child(-n+14).none, .december .week--tile:nth-child(n+8):nth-child(-n+14).none:hover {
-  background: transparent;
-}
-.december .week--tile:nth-child(n+8):nth-child(-n+14).fade {
-  background: #ffefe9;
-}
-.december .week--tile:nth-child(n+15):nth-child(-n+21) {
-  background: #ff5a1d;
-}
-.december .week--tile:nth-child(n+15):nth-child(-n+21):hover {
-  background: coral;
-}
-.december .week--tile:nth-child(n+15):nth-child(-n+21).none, .december .week--tile:nth-child(n+15):nth-child(-n+21).none:hover {
-  background: transparent;
-}
-.december .week--tile:nth-child(n+15):nth-child(-n+21).fade {
-  background: #ffefe9;
-}
-.december .week--tile:nth-child(n+22):nth-child(-n+28) {
-  background: #ff4704;
-}
-.december .week--tile:nth-child(n+22):nth-child(-n+28):hover {
-  background: coral;
-}
-.december .week--tile:nth-child(n+22):nth-child(-n+28).none, .december .week--tile:nth-child(n+22):nth-child(-n+28).none:hover {
-  background: transparent;
-}
-.december .week--tile:nth-child(n+22):nth-child(-n+28).fade {
-  background: #ffefe9;
-}
-.december .week--tile:nth-child(n+29):nth-child(-n+35) {
-  background: #e93f00;
-}
-.december .week--tile:nth-child(n+29):nth-child(-n+35):hover {
-  background: coral;
-}
-.december .week--tile:nth-child(n+29):nth-child(-n+35).none, .december .week--tile:nth-child(n+29):nth-child(-n+35).none:hover {
-  background: transparent;
-}
-.december .week--tile:nth-child(n+29):nth-child(-n+35).fade {
-  background: #ffefe9;
-}
-.december .week--tile:nth-child(n+36):nth-child(-n+42) {
-  background: #d03800;
-}
-.december .week--tile:nth-child(n+36):nth-child(-n+42):hover {
-  background: coral;
-}
-.december .week--tile:nth-child(n+36):nth-child(-n+42).none, .december .week--tile:nth-child(n+36):nth-child(-n+42).none:hover {
-  background: transparent;
-}
-.december .week--tile:nth-child(n+36):nth-child(-n+42).fade {
-  background: #ffefe9;
-}
-
 body {
   margin: 0;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -1067,18 +95,797 @@ body {
 }
 
 .week--tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 150px;
   border-radius: 3px;
   transition: 0.15s linear all;
   font-weight: 600;
-  color: white;
   font-size: 75px;
+  perspective: 500px;
+  position: relative;
 }
-.week--tile:hover {
-  border-radius: 0;
+
+.flip {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+}
+.flip:hover {
+  transition: transform 0.5s;
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.front,
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  font-size: 18px;
+  transform: rotate3d(0, 1, 0, -180deg);
+}
+
+.january.list {
+  background: cadetblue;
+  color: white;
+}
+.january .month--name,
+.january .month--header {
+  color: cadetblue;
+}
+.january .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: cadetblue;
+}
+.january .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.january .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #568e90;
+}
+.january .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.january .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #4c7e80;
+}
+.january .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.january .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #436f70;
+}
+.january .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.january .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #395f60;
+}
+.january .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.january .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: #304f50;
+}
+.january .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.february.list {
+  background: lightblue;
+  color: white;
+}
+.february .month--name,
+.february .month--header {
+  color: lightblue;
+}
+.february .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: lightblue;
+}
+.february .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: white;
+}
+.february .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.february .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #99cfe0;
+}
+.february .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: white;
+}
+.february .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.february .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #86c5da;
+}
+.february .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: white;
+}
+.february .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.february .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #72bcd4;
+}
+.february .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: white;
+}
+.february .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.february .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #5fb3ce;
+}
+.february .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: white;
+}
+.february .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.february .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: #4baac8;
+}
+.february .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: white;
+}
+.february .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.march.list {
+  background: lime;
+  color: white;
+}
+.march .month--name,
+.march .month--header {
+  color: lime;
+}
+.march .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: lime;
+}
+.march .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: #99ff99;
+}
+.march .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.march .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #00e600;
+}
+.march .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: #99ff99;
+}
+.march .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.march .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #00cc00;
+}
+.march .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: #99ff99;
+}
+.march .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.march .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #00b300;
+}
+.march .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: #99ff99;
+}
+.march .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.march .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #009900;
+}
+.march .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: #99ff99;
+}
+.march .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.march .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: green;
+}
+.march .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: #99ff99;
+}
+.march .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.april.list {
+  background: magenta;
+  color: white;
+}
+.april .month--name,
+.april .month--header {
+  color: magenta;
+}
+.april .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: fuchsia;
+}
+.april .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: #ff99ff;
+}
+.april .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.april .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #e600e6;
+}
+.april .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: #ff99ff;
+}
+.april .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.april .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #cc00cc;
+}
+.april .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: #ff99ff;
+}
+.april .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.april .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #b300b3;
+}
+.april .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: #ff99ff;
+}
+.april .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.april .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #990099;
+}
+.april .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: #ff99ff;
+}
+.april .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.april .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: purple;
+}
+.april .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: #ff99ff;
+}
+.april .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.may.list {
+  background: blue;
+  color: white;
+}
+.may .month--name,
+.may .month--header {
+  color: blue;
+}
+.may .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: blue;
+}
+.may .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: #9999ff;
+}
+.may .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.may .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #0000e6;
+}
+.may .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: #9999ff;
+}
+.may .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.may .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #0000cc;
+}
+.may .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: #9999ff;
+}
+.may .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.may .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #0000b3;
+}
+.may .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: #9999ff;
+}
+.may .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.may .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #000099;
+}
+.may .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: #9999ff;
+}
+.may .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.may .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: navy;
+}
+.may .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: #9999ff;
+}
+.may .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.june.list {
+  background: purple;
+  color: white;
+}
+.june .month--name,
+.june .month--header {
+  color: purple;
+}
+.june .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: purple;
+}
+.june .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: #ff1aff;
+}
+.june .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.june .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #670067;
+}
+.june .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: #ff1aff;
+}
+.june .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.june .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #4d004d;
+}
+.june .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: #ff1aff;
+}
+.june .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.june .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #340034;
+}
+.june .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: #ff1aff;
+}
+.june .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.june .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #1a001a;
+}
+.june .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: #ff1aff;
+}
+.june .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.june .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: #010001;
+}
+.june .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: #ff1aff;
+}
+.june .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.july.list {
+  background: burlywood;
+  color: white;
+}
+.july .month--name,
+.july .month--header {
+  color: burlywood;
+}
+.july .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: burlywood;
+}
+.july .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: white;
+}
+.july .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.july .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #d9ac73;
+}
+.july .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: white;
+}
+.july .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.july .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #d3a05f;
+}
+.july .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: white;
+}
+.july .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.july .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #ce954b;
+}
+.july .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: white;
+}
+.july .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.july .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #c88937;
+}
+.july .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: white;
+}
+.july .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.july .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: #b47b32;
+}
+.july .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: white;
+}
+.july .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.august.list {
+  background: pink;
+  color: white;
+}
+.august .month--name,
+.august .month--header {
+  color: pink;
+}
+.august .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: pink;
+}
+.august .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: white;
+}
+.august .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.august .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #ffa7b6;
+}
+.august .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: white;
+}
+.august .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.august .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #ff8da1;
+}
+.august .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: white;
+}
+.august .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.august .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #ff748c;
+}
+.august .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: white;
+}
+.august .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.august .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #ff5a77;
+}
+.august .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: white;
+}
+.august .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.august .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: #ff4162;
+}
+.august .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: white;
+}
+.august .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.september.list {
+  background: wheat;
+  color: white;
+}
+.september .month--name,
+.september .month--header {
+  color: wheat;
+}
+.september .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: wheat;
+}
+.september .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: white;
+}
+.september .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.september .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #f2d49c;
+}
+.september .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: white;
+}
+.september .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.september .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #efca86;
+}
+.september .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: white;
+}
+.september .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.september .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #ecc16f;
+}
+.september .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: white;
+}
+.september .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.september .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #e9b759;
+}
+.september .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: white;
+}
+.september .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.september .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: #e6ad42;
+}
+.september .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: white;
+}
+.september .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.october.list {
+  background: green;
+  color: white;
+}
+.october .month--name,
+.october .month--header {
+  color: green;
+}
+.october .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: green;
+}
+.october .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: #1aff1a;
+}
+.october .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.october .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #006700;
+}
+.october .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: #1aff1a;
+}
+.october .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.october .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #004d00;
+}
+.october .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: #1aff1a;
+}
+.october .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.october .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #003400;
+}
+.october .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: #1aff1a;
+}
+.october .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.october .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #001a00;
+}
+.october .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: #1aff1a;
+}
+.october .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.october .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: #000100;
+}
+.october .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: #1aff1a;
+}
+.october .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.november.list {
+  background: cyan;
+  color: white;
+}
+.november .month--name,
+.november .month--header {
+  color: cyan;
+}
+.november .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: aqua;
+}
+.november .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: #99ffff;
+}
+.november .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.november .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #00e6e6;
+}
+.november .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: #99ffff;
+}
+.november .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.november .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #00cccc;
+}
+.november .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: #99ffff;
+}
+.november .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.november .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #00b3b3;
+}
+.november .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: #99ffff;
+}
+.november .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.november .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #009999;
+}
+.november .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: #99ffff;
+}
+.november .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.november .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: teal;
+}
+.november .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: #99ffff;
+}
+.november .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
+}
+
+.december.list {
+  background: coral;
+  color: white;
+}
+.december .month--name,
+.december .month--header {
+  color: coral;
+}
+.december .week--tile:nth-child(n+1):nth-child(-n+7) .flip {
+  background-color: coral;
+}
+.december .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
+  background: #ffefe9;
+}
+.december .week--tile:nth-child(n+1):nth-child(-n+7).none {
+  background: transparent;
+}
+.december .week--tile:nth-child(n+8):nth-child(-n+14) .flip {
+  background-color: #ff6c37;
+}
+.december .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
+  background: #ffefe9;
+}
+.december .week--tile:nth-child(n+8):nth-child(-n+14).none {
+  background: transparent;
+}
+.december .week--tile:nth-child(n+15):nth-child(-n+21) .flip {
+  background-color: #ff5a1d;
+}
+.december .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
+  background: #ffefe9;
+}
+.december .week--tile:nth-child(n+15):nth-child(-n+21).none {
+  background: transparent;
+}
+.december .week--tile:nth-child(n+22):nth-child(-n+28) .flip {
+  background-color: #ff4704;
+}
+.december .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
+  background: #ffefe9;
+}
+.december .week--tile:nth-child(n+22):nth-child(-n+28).none {
+  background: transparent;
+}
+.december .week--tile:nth-child(n+29):nth-child(-n+35) .flip {
+  background-color: #e93f00;
+}
+.december .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
+  background: #ffefe9;
+}
+.december .week--tile:nth-child(n+29):nth-child(-n+35).none {
+  background: transparent;
+}
+.december .week--tile:nth-child(n+36):nth-child(-n+42) .flip {
+  background-color: #d03800;
+}
+.december .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
+  background: #ffefe9;
+}
+.december .week--tile:nth-child(n+36):nth-child(-n+42).none {
+  background: transparent;
 }
 
 /*# sourceMappingURL=application.css.map */

@@ -59,7 +59,12 @@ class Month {
     for (let i = 1; i <= this.dayCount; i++) {
       const isOutOfRange = i < startDate || i > endDate;
       days.push(
-        `<div class="week--tile${isOutOfRange ? " fade" : ""}">${i}</div>`
+        `<div class='week--tile'>
+          <div class="flip${isOutOfRange ? " fade" : ""}">
+            <div class='front'>${i}</div>
+            <div class='back'>Back</div>
+          </div>
+        </div>`
       );
     }
     if (this.dow > 0) {
@@ -73,9 +78,9 @@ class Month {
     <div class="month ${this.monthName.toLowerCase()}" id="${this.monthName.toLowerCase()}-${
       this.year
       }">
-    <div class="month--name">${this.monthName} ${this.year}</div>
-    <div class="month--header">${WEEK_DAY_ELEMENTS}</div>
-    <div class="month--grid">${days.join("")}</div>
+      <div class="month--name">${this.monthName} ${this.year}</div>
+      <div class="month--header">${WEEK_DAY_ELEMENTS}</div>
+      <div class="month--grid">${days.join("")}</div>
     </div>`;
   };
 }

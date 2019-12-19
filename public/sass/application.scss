@@ -32,56 +32,19 @@ $december: coral;
     $end: $weekI + 7;
     $background: darken($color, $i * 5);
     .week--tile:nth-child(n + #{$start}):nth-child(-n + #{$end}) {
-      background: $background;
-      &:hover {
-        background: $color;
+      .flip {
+        background-color: $background;
+        &.fade {
+          background: lighten($color, 30%);
+        }
       }
-      &.none,
-      &.none:hover {
+      &.none {
         background: transparent;
-      }
-      &.fade {
-        background: lighten($color, 30%);
       }
     }
   }
 }
-.january {
-  @include loop-colors($january);
-}
-.february {
-  @include loop-colors($february);
-}
-.march {
-  @include loop-colors($march);
-}
-.april {
-  @include loop-colors($april);
-}
-.may {
-  @include loop-colors($may);
-}
-.june {
-  @include loop-colors($june);
-}
-.july {
-  @include loop-colors($july);
-}
-.august {
-  @include loop-colors($august);
-}
-.september {
-  @include loop-colors($september);
-}
-.october {
-  @include loop-colors($october);
-}
-.november {
-  @include loop-colors($november);
-}
-.december {
-  @include loop-colors($december);
-}
+
 body {
   margin: 0;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
@@ -181,17 +144,76 @@ body {
 }
 
 .week--tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: $tile-width;
   border-radius: 3px;
   transition: 0.15s linear all;
   font-weight: 600;
-  color: white;
   font-size: 75px;
+  perspective: 500px;
+  position: relative;
+}
+.flip {
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
 
   &:hover {
-    border-radius: 0;
+    transition: transform 0.5s;
+    transform: rotate3d(0, 1, 0, 180deg);
   }
+}
+
+.front,
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  font-size: 18px;
+  transform: rotate3d(0, 1, 0, -180deg);
+}
+
+.january {
+  @include loop-colors($january);
+}
+.february {
+  @include loop-colors($february);
+}
+.march {
+  @include loop-colors($march);
+}
+.april {
+  @include loop-colors($april);
+}
+.may {
+  @include loop-colors($may);
+}
+.june {
+  @include loop-colors($june);
+}
+.july {
+  @include loop-colors($july);
+}
+.august {
+  @include loop-colors($august);
+}
+.september {
+  @include loop-colors($september);
+}
+.october {
+  @include loop-colors($october);
+}
+.november {
+  @include loop-colors($november);
+}
+.december {
+  @include loop-colors($december);
 }
