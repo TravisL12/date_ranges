@@ -150,9 +150,9 @@ body {
   font-weight: 600;
   font-size: 75px;
   perspective: 500px;
-  position: relative;
 }
 .flip {
+  position: relative;
   transition: transform 2s;
   transform-style: preserve-3d;
   height: 100%;
@@ -177,8 +177,9 @@ body {
 }
 
 .back {
+  z-index: 2;
   font-size: 18px;
-  transform: rotate3d(0, 1, 0, -180deg);
+  transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 1px);
 }
 
 .january {
