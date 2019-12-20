@@ -97,6 +97,7 @@ body {
 .week--tile {
   height: 150px;
   border-radius: 3px;
+  cursor: pointer;
   transition: 0.15s linear all;
   font-weight: 600;
   font-size: 75px;
@@ -105,12 +106,12 @@ body {
 
 .flip {
   position: relative;
-  transition: transform 2s;
+  transition: transform 1.2s;
   transform-style: preserve-3d;
   height: 100%;
   width: 100%;
 }
-.flip:hover {
+.flip.rotate {
   transition: transform 0.5s;
   transform: rotate3d(0, 1, 0, 180deg);
 }
@@ -128,7 +129,6 @@ body {
 }
 
 .back {
-  z-index: 2;
   font-size: 18px;
   transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 1px);
 }
@@ -147,6 +147,9 @@ body {
 .january .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: #bfd8d9;
 }
+.january .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: cadetblue;
+}
 .january .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -155,6 +158,9 @@ body {
 }
 .january .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: cadetblue;
 }
 .january .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -165,6 +171,9 @@ body {
 .january .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: #bfd8d9;
 }
+.january .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: cadetblue;
+}
 .january .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -173,6 +182,9 @@ body {
 }
 .january .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: cadetblue;
 }
 .january .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -183,6 +195,9 @@ body {
 .january .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: #bfd8d9;
 }
+.january .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: cadetblue;
+}
 .january .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -191,6 +206,9 @@ body {
 }
 .january .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: #bfd8d9;
+}
+.january .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: cadetblue;
 }
 .january .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -210,6 +228,9 @@ body {
 .february .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: white;
 }
+.february .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: lightblue;
+}
 .february .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -218,6 +239,9 @@ body {
 }
 .february .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: white;
+}
+.february .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: lightblue;
 }
 .february .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -228,6 +252,9 @@ body {
 .february .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: white;
 }
+.february .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: lightblue;
+}
 .february .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -236,6 +263,9 @@ body {
 }
 .february .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: white;
+}
+.february .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: lightblue;
 }
 .february .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -246,6 +276,9 @@ body {
 .february .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: white;
 }
+.february .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: lightblue;
+}
 .february .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -254,6 +287,9 @@ body {
 }
 .february .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: white;
+}
+.february .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: lightblue;
 }
 .february .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -273,6 +309,9 @@ body {
 .march .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: #99ff99;
 }
+.march .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: lime;
+}
 .march .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -281,6 +320,9 @@ body {
 }
 .march .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: #99ff99;
+}
+.march .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: lime;
 }
 .march .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -291,6 +333,9 @@ body {
 .march .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: #99ff99;
 }
+.march .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: lime;
+}
 .march .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -299,6 +344,9 @@ body {
 }
 .march .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: #99ff99;
+}
+.march .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: lime;
 }
 .march .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -309,6 +357,9 @@ body {
 .march .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: #99ff99;
 }
+.march .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: lime;
+}
 .march .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -317,6 +368,9 @@ body {
 }
 .march .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: #99ff99;
+}
+.march .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: lime;
 }
 .march .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -336,6 +390,9 @@ body {
 .april .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: #ff99ff;
 }
+.april .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: magenta;
+}
 .april .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -344,6 +401,9 @@ body {
 }
 .april .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: #ff99ff;
+}
+.april .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: magenta;
 }
 .april .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -354,6 +414,9 @@ body {
 .april .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: #ff99ff;
 }
+.april .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: magenta;
+}
 .april .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -362,6 +425,9 @@ body {
 }
 .april .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: #ff99ff;
+}
+.april .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: magenta;
 }
 .april .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -372,6 +438,9 @@ body {
 .april .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: #ff99ff;
 }
+.april .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: magenta;
+}
 .april .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -380,6 +449,9 @@ body {
 }
 .april .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: #ff99ff;
+}
+.april .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: magenta;
 }
 .april .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -399,6 +471,9 @@ body {
 .may .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: #9999ff;
 }
+.may .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: blue;
+}
 .may .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -407,6 +482,9 @@ body {
 }
 .may .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: #9999ff;
+}
+.may .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: blue;
 }
 .may .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -417,6 +495,9 @@ body {
 .may .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: #9999ff;
 }
+.may .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: blue;
+}
 .may .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -425,6 +506,9 @@ body {
 }
 .may .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: #9999ff;
+}
+.may .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: blue;
 }
 .may .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -435,6 +519,9 @@ body {
 .may .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: #9999ff;
 }
+.may .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: blue;
+}
 .may .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -443,6 +530,9 @@ body {
 }
 .may .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: #9999ff;
+}
+.may .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: blue;
 }
 .may .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -462,6 +552,9 @@ body {
 .june .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: #ff1aff;
 }
+.june .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: purple;
+}
 .june .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -470,6 +563,9 @@ body {
 }
 .june .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: #ff1aff;
+}
+.june .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: purple;
 }
 .june .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -480,6 +576,9 @@ body {
 .june .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: #ff1aff;
 }
+.june .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: purple;
+}
 .june .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -488,6 +587,9 @@ body {
 }
 .june .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: #ff1aff;
+}
+.june .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: purple;
 }
 .june .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -498,6 +600,9 @@ body {
 .june .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: #ff1aff;
 }
+.june .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: purple;
+}
 .june .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -506,6 +611,9 @@ body {
 }
 .june .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: #ff1aff;
+}
+.june .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: purple;
 }
 .june .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -525,6 +633,9 @@ body {
 .july .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: white;
 }
+.july .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: burlywood;
+}
 .july .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -533,6 +644,9 @@ body {
 }
 .july .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: white;
+}
+.july .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: burlywood;
 }
 .july .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -543,6 +657,9 @@ body {
 .july .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: white;
 }
+.july .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: burlywood;
+}
 .july .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -551,6 +668,9 @@ body {
 }
 .july .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: white;
+}
+.july .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: burlywood;
 }
 .july .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -561,6 +681,9 @@ body {
 .july .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: white;
 }
+.july .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: burlywood;
+}
 .july .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -569,6 +692,9 @@ body {
 }
 .july .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: white;
+}
+.july .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: burlywood;
 }
 .july .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -588,6 +714,9 @@ body {
 .august .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: white;
 }
+.august .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: pink;
+}
 .august .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -596,6 +725,9 @@ body {
 }
 .august .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: white;
+}
+.august .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: pink;
 }
 .august .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -606,6 +738,9 @@ body {
 .august .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: white;
 }
+.august .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: pink;
+}
 .august .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -614,6 +749,9 @@ body {
 }
 .august .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: white;
+}
+.august .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: pink;
 }
 .august .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -624,6 +762,9 @@ body {
 .august .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: white;
 }
+.august .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: pink;
+}
 .august .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -632,6 +773,9 @@ body {
 }
 .august .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: white;
+}
+.august .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: pink;
 }
 .august .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -651,6 +795,9 @@ body {
 .september .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: white;
 }
+.september .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: wheat;
+}
 .september .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -659,6 +806,9 @@ body {
 }
 .september .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: white;
+}
+.september .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: wheat;
 }
 .september .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -669,6 +819,9 @@ body {
 .september .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: white;
 }
+.september .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: wheat;
+}
 .september .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -677,6 +830,9 @@ body {
 }
 .september .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: white;
+}
+.september .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: wheat;
 }
 .september .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -687,6 +843,9 @@ body {
 .september .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: white;
 }
+.september .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: wheat;
+}
 .september .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -695,6 +854,9 @@ body {
 }
 .september .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: white;
+}
+.september .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: wheat;
 }
 .september .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -714,6 +876,9 @@ body {
 .october .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: #1aff1a;
 }
+.october .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: green;
+}
 .october .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -722,6 +887,9 @@ body {
 }
 .october .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: #1aff1a;
+}
+.october .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: green;
 }
 .october .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -732,6 +900,9 @@ body {
 .october .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: #1aff1a;
 }
+.october .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: green;
+}
 .october .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -740,6 +911,9 @@ body {
 }
 .october .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: #1aff1a;
+}
+.october .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: green;
 }
 .october .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -750,6 +924,9 @@ body {
 .october .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: #1aff1a;
 }
+.october .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: green;
+}
 .october .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -758,6 +935,9 @@ body {
 }
 .october .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: #1aff1a;
+}
+.october .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: green;
 }
 .october .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -777,6 +957,9 @@ body {
 .november .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: #99ffff;
 }
+.november .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: cyan;
+}
 .november .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -785,6 +968,9 @@ body {
 }
 .november .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: #99ffff;
+}
+.november .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: cyan;
 }
 .november .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -795,6 +981,9 @@ body {
 .november .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: #99ffff;
 }
+.november .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: cyan;
+}
 .november .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -803,6 +992,9 @@ body {
 }
 .november .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: #99ffff;
+}
+.november .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: cyan;
 }
 .november .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -813,6 +1005,9 @@ body {
 .november .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: #99ffff;
 }
+.november .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: cyan;
+}
 .november .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -821,6 +1016,9 @@ body {
 }
 .november .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: #99ffff;
+}
+.november .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: cyan;
 }
 .november .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;
@@ -840,6 +1038,9 @@ body {
 .december .week--tile:nth-child(n+1):nth-child(-n+7) .flip.fade {
   background: #ffefe9;
 }
+.december .week--tile:nth-child(n+1):nth-child(-n+7) .flip .back {
+  background-color: coral;
+}
 .december .week--tile:nth-child(n+1):nth-child(-n+7).none {
   background: transparent;
 }
@@ -848,6 +1049,9 @@ body {
 }
 .december .week--tile:nth-child(n+8):nth-child(-n+14) .flip.fade {
   background: #ffefe9;
+}
+.december .week--tile:nth-child(n+8):nth-child(-n+14) .flip .back {
+  background-color: coral;
 }
 .december .week--tile:nth-child(n+8):nth-child(-n+14).none {
   background: transparent;
@@ -858,6 +1062,9 @@ body {
 .december .week--tile:nth-child(n+15):nth-child(-n+21) .flip.fade {
   background: #ffefe9;
 }
+.december .week--tile:nth-child(n+15):nth-child(-n+21) .flip .back {
+  background-color: coral;
+}
 .december .week--tile:nth-child(n+15):nth-child(-n+21).none {
   background: transparent;
 }
@@ -866,6 +1073,9 @@ body {
 }
 .december .week--tile:nth-child(n+22):nth-child(-n+28) .flip.fade {
   background: #ffefe9;
+}
+.december .week--tile:nth-child(n+22):nth-child(-n+28) .flip .back {
+  background-color: coral;
 }
 .december .week--tile:nth-child(n+22):nth-child(-n+28).none {
   background: transparent;
@@ -876,6 +1086,9 @@ body {
 .december .week--tile:nth-child(n+29):nth-child(-n+35) .flip.fade {
   background: #ffefe9;
 }
+.december .week--tile:nth-child(n+29):nth-child(-n+35) .flip .back {
+  background-color: coral;
+}
 .december .week--tile:nth-child(n+29):nth-child(-n+35).none {
   background: transparent;
 }
@@ -884,6 +1097,9 @@ body {
 }
 .december .week--tile:nth-child(n+36):nth-child(-n+42) .flip.fade {
   background: #ffefe9;
+}
+.december .week--tile:nth-child(n+36):nth-child(-n+42) .flip .back {
+  background-color: coral;
 }
 .december .week--tile:nth-child(n+36):nth-child(-n+42).none {
   background: transparent;

@@ -60,9 +60,9 @@ class Month {
       const isOutOfRange = i < startDate || i > endDate;
       days.push(
         `<div class='week--tile'>
-          <div class="flip${isOutOfRange ? " fade" : ""}">
+          <div class="flip${isOutOfRange ? " fade" : ""}" data-date='${zeroPad(this.year)}${zeroPad(this.month + 1)}${zeroPad(i)}'>
             <div class='front'>${i}</div>
-            <div class='back'>Back</div>
+            <div class='back'>img</div>
           </div>
         </div>`
       );
@@ -152,6 +152,23 @@ class Calendar {
     this.renderCalendar(months);
   };
 
+  addRotateListener = () => {
+    const flips = document.querySelectorAll(".flip");
+    flips.forEach(el => {
+      el.addEventListener("click", event => {
+        const rotated = document.querySelector(".rotate");
+        if (rotated) {
+          rotated.classList.remove("rotate");
+        }
+        const tile = event.currentTarget;
+        const date = tile.dataset.date;
+        const apodImg = `https://apod.nasa.gov/apod/calendar/S_${date}.jpg`;
+        tile.querySelector('.back').innerHTML = `<img src="${apodImg}" />`
+        tile.classList.add("rotate");
+      });
+    });
+  };
+
   renderCalendar = months => {
     const { start, end } = this.getDateValues();
     let countDays = 0;
@@ -178,6 +195,7 @@ class Calendar {
       (start.getDate() - 1 + finishDay)}`;
     this.dateListEl.innerHTML = output.list;
     this.calendarEl.innerHTML = output.grid;
+    this.addRotateListener();
   };
 }
 

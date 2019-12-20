@@ -37,6 +37,9 @@ $december: coral;
         &.fade {
           background: lighten($color, 30%);
         }
+        .back {
+          background-color: $color;
+        }
       }
       &.none {
         background: transparent;
@@ -146,6 +149,7 @@ body {
 .week--tile {
   height: $tile-width;
   border-radius: 3px;
+  cursor: pointer;
   transition: 0.15s linear all;
   font-weight: 600;
   font-size: 75px;
@@ -153,12 +157,12 @@ body {
 }
 .flip {
   position: relative;
-  transition: transform 2s;
+  transition: transform 1.2s;
   transform-style: preserve-3d;
   height: 100%;
   width: 100%;
 
-  &:hover {
+  &.rotate {
     transition: transform 0.5s;
     transform: rotate3d(0, 1, 0, 180deg);
   }
@@ -177,7 +181,6 @@ body {
 }
 
 .back {
-  z-index: 2;
   font-size: 18px;
   transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 1px);
 }
