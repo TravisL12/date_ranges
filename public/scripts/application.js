@@ -54,13 +54,15 @@ class Month {
     this.monthName = MONTH_NAMES[date.getMonth()];
   }
 
-  render = (startDate, endDate) => {
+  render(startDate, endDate) {
     let days = [];
     for (let i = 1; i <= this.dayCount; i++) {
       const isOutOfRange = i < startDate || i > endDate;
       days.push(
         `<div class='week--tile'>
-          <div class="flip${isOutOfRange ? " fade" : ""}" data-date='${zeroPad(this.year)}${zeroPad(this.month + 1)}${zeroPad(i)}'>
+          <div class="flip${isOutOfRange ? " fade" : ""}" data-date='${zeroPad(
+          this.year
+        )}${zeroPad(this.month + 1)}${zeroPad(i)}'>
             <div class='front'>${i}</div>
             <div class='back'>img</div>
           </div>
@@ -82,7 +84,7 @@ class Month {
       <div class="month--header">${WEEK_DAY_ELEMENTS}</div>
       <div class="month--grid">${days.join("")}</div>
     </div>`;
-  };
+  }
 }
 
 class Calendar {
@@ -108,13 +110,15 @@ class Calendar {
     });
   }
 
-  getDateValues = () => {
-    const start = new Date(this.startEl.value.split("-"));
-    const end = new Date(this.endEl.value.split("-"));
+  getDateValues() {
+    const stringStart = this.startEl.value.split("-");
+    const stringEnd = this.endEl.value.split("-");
+    const start = new Date(stringStart[0], stringStart[1] - 1, stringStart[2]);
+    const end = new Date(stringEnd[0], stringEnd[1] - 1, stringEnd[2]);
     return { start, end };
-  };
+  }
 
-  dayRange = (start, end, month) => {
+  dayRange(start, end, month) {
     const range = { start: 1, end: month.dayCount };
     if (
       month.year === start.getFullYear() &&
@@ -126,9 +130,9 @@ class Calendar {
       range.end = end.getDate();
     }
     return range;
-  };
+  }
 
-  getDateRange = () => {
+  getDateRange() {
     const { start, end } = this.getDateValues();
     const months = [];
     const startYear = start.getFullYear();
@@ -150,9 +154,9 @@ class Calendar {
     }
 
     this.renderCalendar(months);
-  };
+  }
 
-  addRotateListener = () => {
+  addRotateListener() {
     const flips = document.querySelectorAll(".flip");
     flips.forEach(el => {
       el.addEventListener("click", event => {
@@ -163,13 +167,13 @@ class Calendar {
         const tile = event.currentTarget;
         const date = tile.dataset.date;
         const apodImg = `https://apod.nasa.gov/apod/calendar/S_${date}.jpg`;
-        tile.querySelector('.back').innerHTML = `<img src="${apodImg}" />`
+        tile.querySelector(".back").innerHTML = `<img src="${apodImg}" />`;
         tile.classList.add("rotate");
       });
     });
-  };
+  }
 
-  renderCalendar = months => {
+  renderCalendar(months) {
     const { start, end } = this.getDateValues();
     let countDays = 0;
     const output = {
@@ -196,7 +200,7 @@ class Calendar {
     this.dateListEl.innerHTML = output.list;
     this.calendarEl.innerHTML = output.grid;
     this.addRotateListener();
-  };
+  }
 }
 
 const calendar = new Calendar();
