@@ -64,7 +64,7 @@ class Month {
           this.year
         )}${zeroPad(this.month + 1)}${zeroPad(i)}'>
             <div class='front'>${i}</div>
-            <div class='back'>img</div>
+            <div class='back'></div>
           </div>
         </div>`
       );
@@ -79,7 +79,7 @@ class Month {
     return `
     <div class="month ${this.monthName.toLowerCase()}" id="${this.monthName.toLowerCase()}-${
       this.year
-      }">
+    }">
       <div class="month--name">${this.monthName} ${this.year}</div>
       <div class="month--header">${WEEK_DAY_ELEMENTS}</div>
       <div class="month--grid">${days.join("")}</div>
@@ -160,14 +160,29 @@ class Calendar {
     const flips = document.querySelectorAll(".flip");
     flips.forEach(el => {
       el.addEventListener("click", event => {
+        const tile = event.currentTarget;
         const rotated = document.querySelector(".rotate");
         if (rotated) {
           rotated.classList.remove("rotate");
         }
-        const tile = event.currentTarget;
+        if (tile === rotated) {
+          return;
+        }
         const date = tile.dataset.date;
-        const apodImg = `https://apod.nasa.gov/apod/calendar/S_${date}.jpg`;
-        tile.querySelector(".back").innerHTML = `<img src="${apodImg}" />`;
+        const apodLink = document.createElement("a");
+        apodLink.setAttribute("target", "_blank");
+        apodLink.setAttribute("rel", "noopener noreferrer");
+        apodLink.setAttribute(
+          "href",
+          `https://apod.nasa.gov/apod/ap${date}.html`
+        );
+        const apodImage = document.createElement("img");
+        apodImage.setAttribute(
+          "src",
+          `https://apod.nasa.gov/apod/calendar/S_${date}.jpg`
+        );
+        apodLink.appendChild(apodImage);
+        tile.querySelector(".back").appendChild(apodLink);
         tile.classList.add("rotate");
       });
     });
