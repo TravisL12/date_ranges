@@ -169,20 +169,24 @@ class Calendar {
           return;
         }
         const date = tile.dataset.date;
-        const apodLink = document.createElement("a");
-        apodLink.setAttribute("target", "_blank");
-        apodLink.setAttribute("rel", "noopener noreferrer");
-        apodLink.setAttribute(
-          "href",
-          `https://apod.nasa.gov/apod/ap${date}.html`
-        );
-        const apodImage = document.createElement("img");
-        apodImage.setAttribute(
-          "src",
-          `https://apod.nasa.gov/apod/calendar/S_${date}.jpg`
-        );
-        apodLink.appendChild(apodImage);
-        tile.querySelector(".back").appendChild(apodLink);
+        const backTile = tile.querySelector(".back");
+        
+        if (!backTile.querySelector('a')) {
+          const apodLink = document.createElement("a");
+          apodLink.setAttribute("target", "_blank");
+          apodLink.setAttribute("rel", "noopener noreferrer");
+          apodLink.setAttribute(
+            "href",
+            `https://apod.nasa.gov/apod/ap${date}.html`
+          );
+          const apodImage = document.createElement("img");
+          apodImage.setAttribute(
+            "src",
+            `https://apod.nasa.gov/apod/calendar/S_${date}.jpg`
+          );
+          apodLink.appendChild(apodImage);
+          backTile.appendChild(apodLink);
+        }
         tile.classList.add("rotate");
       });
     });
