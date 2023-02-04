@@ -12,7 +12,7 @@ const MONTH_NAMES = [
   "September",
   "October",
   "November",
-  "December"
+  "December",
 ];
 
 const DAY_NAMES = [
@@ -22,12 +22,23 @@ const DAY_NAMES = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 
 const WEEK_DAY_ELEMENTS = DAY_NAMES.map(
-  day => `<div class="month--header-day">${day}</div>`
+  (day) => `<div class="month--header-day">${day}</div>`
 ).join("");
+
+const observerEl = document.getElementById("json-dates");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const { isIntersecting } = entry;
+      entry.target.classList.toggle("not-intersecting", !isIntersecting);
+    });
+  },
+  { root: observerEl, threshold: 0.2 }
+);
 
 function formatDate(date = new Date()) {
   const year = date.getFullYear();
@@ -99,22 +110,24 @@ class Calendar {
     this.calendarEl = document.getElementById("json-dates");
 
     const defaultEnd = new Date();
-    const defaultStart = new Date(defaultEnd.getFullYear(), 0);
+    const defaultStart = new Date(defaultEnd.getFullYear() - 1, 0);
 
     this.startEl.value = formatDate(defaultStart);
     this.endEl.value = formatDate(defaultEnd);
 
-    dateSubmit.addEventListener("submit", e => {
+    dateSubmit.addEventListener("submit", (e) => {
       e.preventDefault();
       this.getDateRange();
     });
+
+    this.getDateRange();
   }
 
   getDateValues() {
-    const stringStart = this.startEl.value.split("-");
-    const stringEnd = this.endEl.value.split("-");
-    const start = new Date(stringStart[0], stringStart[1] - 1, stringStart[2]);
-    const end = new Date(stringEnd[0], stringEnd[1] - 1, stringEnd[2]);
+    const [startYear, startMonth, startDay] = this.startEl.value.split("-");
+    const [endYear, endMonth, endDay] = this.endEl.value.split("-");
+    const start = new Date(startYear, startMonth - 1, startDay);
+    const end = new Date(endYear, endMonth - 1, endDay);
     return { start, end };
   }
 
@@ -158,8 +171,8 @@ class Calendar {
 
   addRotateListener() {
     const flips = document.querySelectorAll(".flip");
-    flips.forEach(el => {
-      el.addEventListener("click", event => {
+    flips.forEach((el) => {
+      el.addEventListener("click", (event) => {
         const tile = event.currentTarget;
         const rotated = document.querySelector(".rotate");
         if (rotated) {
@@ -170,8 +183,8 @@ class Calendar {
         }
         const date = tile.dataset.date;
         const backTile = tile.querySelector(".back");
-        
-        if (!backTile.querySelector('a')) {
+
+        if (!backTile.querySelector("a")) {
           const apodLink = document.createElement("a");
           apodLink.setAttribute("target", "_blank");
           apodLink.setAttribute("rel", "noopener noreferrer");
@@ -197,14 +210,15 @@ class Calendar {
     let countDays = 0;
     const output = {
       grid: "",
-      list: ""
+      list: "",
     };
 
     let finishDay = 0;
     months.reduce((el, month) => {
       const { start: startDay, end: endDay } = this.dayRange(start, end, month);
-      el.grid += month.render(startDay, endDay);
       const { year, monthName } = month;
+      const renderedMonth = month.render(startDay, endDay);
+      el.grid += renderedMonth;
       el.list += `<div class='${monthName.toLowerCase()} list'>
     <a href='#${monthName.toLowerCase()}-${year}'>${monthName} ${year}</a>
     </div>`;
@@ -214,13 +228,16 @@ class Calendar {
       return el;
     }, output);
 
-    this.countEl.textContent = `Day Count: ${countDays -
-      (start.getDate() - 1 + finishDay)}`;
+    this.countEl.textContent = `Day Count: ${
+      countDays - (start.getDate() - 1 + finishDay)
+    }`;
     this.dateListEl.innerHTML = output.list;
     this.calendarEl.innerHTML = output.grid;
+    this.calendarEl.querySelectorAll(".month").forEach((m) => {
+      observer.observe(m);
+    });
     this.addRotateListener();
   }
 }
 
-const calendar = new Calendar();
-calendar.getDateRange();
+new Calendar();

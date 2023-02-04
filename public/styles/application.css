@@ -64,6 +64,11 @@ body {
   grid-template-rows: 60px 20px 1fr;
   grid-gap: 5px;
   margin-bottom: 20px;
+  transition: 0.2s linear opacity;
+}
+
+.not-intersecting {
+  opacity: 0;
 }
 
 .month--name {
