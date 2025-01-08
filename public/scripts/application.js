@@ -25,6 +25,41 @@ const DAY_NAMES = [
   "Saturday",
 ];
 
+function splitDateRange(startDate, endDate) {
+  const result = {
+    years: 0,
+    months: 0,
+    days: 0,
+  };
+
+  let currentDate = new Date(startDate);
+
+  while (currentDate < endDate) {
+    const nextYear = new Date(currentDate);
+    nextYear.setFullYear(currentDate.getFullYear() + 1);
+
+    if (nextYear <= endDate) {
+      result.years++;
+      currentDate = nextYear;
+    } else {
+      const nextMonth = new Date(currentDate);
+      nextMonth.setMonth(currentDate.getMonth() + 1);
+
+      if (nextMonth <= endDate) {
+        result.months++;
+        currentDate = nextMonth;
+      } else {
+        result.days = Math.ceil(
+          (endDate - currentDate) / (1000 * 60 * 60 * 24)
+        );
+        currentDate = endDate;
+      }
+    }
+  }
+
+  return result;
+}
+
 const WEEK_DAY_ELEMENTS = DAY_NAMES.map(
   (day) => `<div class="month--header-day">${day}</div>`
 ).join("");
@@ -228,9 +263,14 @@ class Calendar {
       return el;
     }, output);
 
-    this.countEl.textContent = `Day Count: ${
-      countDays - (start.getDate() - 1 + finishDay)
-    }`;
+    const dateBreakdown = splitDateRange(start, end);
+    this.countEl.innerHTML = `
+    <div style="margin: 5px 0">
+    <div>Years: ${dateBreakdown.years} | Months: ${
+      dateBreakdown.months
+    } | Days: ${dateBreakdown.days}</div>
+    <div>Days: ${countDays - (start.getDate() - 1 + finishDay)}</div>
+    </div>`;
     this.dateListEl.innerHTML = output.list;
     this.calendarEl.innerHTML = output.grid;
     this.calendarEl.querySelectorAll(".month").forEach((m) => {
